@@ -178,7 +178,7 @@ hr {
 /* Estilo para la imagen de perfil */
 .profile-image {
     width: 200px;
-    height: auto;
+    height: 100px;
     object-fit: cover;
     object-position: 50% 5%;
     border-radius: 50%;

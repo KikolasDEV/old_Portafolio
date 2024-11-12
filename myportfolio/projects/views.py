@@ -23,6 +23,6 @@ def contact(request):
             )
             messages.success(request, 'Mensaje enviado. ¡Gracias por contactarme!')
             return redirect('contact')
-        else:
-            form = ContactForm()
-        return render(request, 'contact.html', {'form': form})
+    else:
+        form = ContactForm()
+    return render(request, 'projects/contact.html', {'form': form})
