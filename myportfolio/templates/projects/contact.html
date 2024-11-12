@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "projects/base.html" %}
+{% block body_block %}
 
-</body>
-</html>
+<div class="container contact-page mt-5 pt-4">
+    <h2 class="text-center">Contacto</h2>
+
+    {% if messages %}
+      <div class="alert alert-success" role="alert">
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <p class="lead text-center">Si tienes alguna pregunta, puedes escribirme directamente a mi correo <strong>kikoamarillo94@gmail.com</strong> o utilizar el formulario.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>var editor = new MediumEditor('.editable');</script>
+
+{% endblock %}

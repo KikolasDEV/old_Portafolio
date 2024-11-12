@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "projects/base.html" %}
+{% load static %}
+{% block body_block %}
 
-</body>
-</html>
+<div class="container mt-5 pt-4">
+    <section id="sobre-mi" class="d-flex align-items-center">
+        <div class="row">
+            <div class="col-md-4 text-center">
+<!--                <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image">-->
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+                <div>
+                    <h1 class="display-4 nombre-completo">José Francisco González Amarillo</h1>
+                    <p class="lead descripcion">Desarrollador de software con experiencia en Python y frameworks como Django, Jinja y Bootstrap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="my-4">
+</div>
+
+{% endblock %}
