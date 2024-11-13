@@ -11,135 +11,35 @@
   font-style: normal;
 }
 
-/* General - Paleta de colores oscuros con gradientes */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background: linear-gradient(135deg, #2C2E3E, #1E1F29);
     color: #e0e0e0;
 }
 
-/* Header y Navbar */
+footer {
+    background-color: #1E1F29;
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
 
 .bigbrand{
     font-size: 1.5em;
 }
 
-/* Imagen circular */
-img.rounded-circle {
-    border: 3px solid #bb86fc;
+.form-group label {
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
-.form-control {
-    font-size: 1rem;  /* Ajusta el tamaño de fuente si es necesario */
-    padding: 10px;  /* Asegura un buen espaciado interno */
-}
-
-/* Sobre mí - Estilo de los títulos y la descripción */
-
-.nombre-completo {
-    font-size: 2.5rem;
-    line-height: 1.2;
-}
-
-/* Sección de Correo en "Sobre mí" */
-.email-section {
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    color: #e0e0e0;
-}
-
-.email-section .fas {
-    color: #bb86fc;
-}
-
-.email-text {
-    margin-left: 10px;
-    font-size: 1.2rem;
-}
-
-/* Sección de Tecnologías y Herramientas */
-.technology-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-}
-
-.technology-icon {
-    font-size: 35px;
-    color: #03dac6;
-    transition: color 0.3s ease;
-}
-
-.technology-icon:hover {
-    color: #bb86fc;
-}
-
-/* Ajustes personalizados para el icono de C# */
-.icon-csharp {
-    display: inline-flex;
-    align-items: center;
-}
-
-.sharp-symbol {
-    font-size: 1.5rem;
-    margin-left: 5px;
-    color: #03dac6;
-}
-
-.technology-icon:hover + .sharp-symbol {
-    color: #bb86fc;
-}
-
-/* Estilo de los nombres de las tecnologías */
-p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #e0e0e0;
-}
-
-/* Sección de Proyectos - Estilo estándar para las tarjetas */
-.card {
-    background-color: #2C2E3E;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-    color: #bb86fc;
-}
-
-.card-text {
-    color: #b0b0b0;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: 50% 7%;
-    border-bottom: 2px solid #bb86fc;
-}
-
-/* Sección de Contacto */
-
-/* Footer */
-footer {
-    background-color: #1E1F29;
-    padding: 20px 0;
-    color: #e0e0e0;
-    margin-top: 150px;
-}
-
-/* Líneas divisorias */
-hr {
-    border-top: 1px solid #bb86fc;
-}
-
-/* Ajuste de espaciado entre la imagen y el texto */
-#sobre-mi {
-    padding-left: 15px;
-}
 
 /* Estilo para la imagen de perfil */
 .profile-image {
@@ -151,41 +51,10 @@ hr {
     border: 3px solid #bb86fc;
 }
 
-/* Para pantallas pequeñas */
-@media (max-width: 768px) {
-    .profile-image {
-        width: 150px; /* Ajusta el tamaño para pantallas móviles */
-    }
-}
-
-/* Forzar que el footer quede al final de la página solo en la página de contacto */
-.contact-page {
-    min-height: 82.5vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Compactar el formulario y los textos en la página de contacto */
-.contact-page p.lead {
-    margin: 0 0 20px;
-    font-size: 1.1rem;
-    text-align: center;
-    padding: 0 15px; /* Añadir padding para evitar que el texto toque los bordes */
-}
-
-.contact-page .form-group {
-    margin-bottom: 15px; /* Reduce el espacio inferior entre los campos del formulario */
-}
-
-.contact-page h2 {
-    font-family: 'Montserrat', sans-serif; /* Asegurar la fuente de los títulos */
-}
 
 
-.contact-page .container {
-    padding: 20px 0; /* Reduce el padding alrededor del formulario */
-}
 
-.contact-page footer {
-    margin-top: auto; /* Esto asegura que el footer esté al final */
-}
+
+
+
+

@@ -15,7 +15,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <p class="lead text-center">Si tienes alguna pregunta o sugerencia, puedes escribirme directamente a mi correo
+            <p class="lead text-center">Si tienes alguna pregunta, puedes escribirme directamente a mi correo
                 <strong><i class="fas fa-envelope"></i> kikoamarillo94@gmail.com</strong> o utilizar el formulario.</p>
         </div>
     </div>
@@ -24,22 +24,36 @@
         <div class="col-md-6">
             <form method="POST">
                 {% csrf_token %}
-                {% bootstrap_form form %}
+                {% bootstrap_field form.nombre %}
+                {% bootstrap_field form.email %}
+
+                <!-- Quill editor container -->
+                <div class="form-group">
+                    <label for="editor-container">Mensaje</label>
+                    <div id="editor-container" style="height: 200px; background-color: white;"></div>
+                </div>
+                <!-- Hidden textarea that will hold the content from Quill -->
+                <textarea name="mensaje" id="mensaje" style="display:none;"></textarea>
+
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
 
 <script>
-    // Inicializar QuillJS
-    var quill = new Quill('#quill-editor', {
+    // Inicializar el editor Quill
+    var quill = new Quill('#editor-container', {
+        placeholder: 'Escribe tu mensaje',
         theme: 'snow'
     });
 
-    // Función para sincronizar contenido de Quill con el textarea antes de enviar
-    function syncQuillContent() {
-        document.getElementById('quill-textarea').value = quill.root.innerHTML;
-    }
+    // Actualizar el textarea oculto antes de enviar el formulario
+    document.querySelector('form').onsubmit = function() {
+        document.querySelector('#mensaje').value = quill.root.innerHTML;
+    };
 </script>
 
 {% endblock %}
