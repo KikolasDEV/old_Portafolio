@@ -1,35 +1,26 @@
-/* Fuentes de Google */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Slab:wght@400&display=swap');
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* General - Paleta de colores oscuros con gradientes */
 body {
     background: linear-gradient(135deg, #2C2E3E, #1E1F29);
     color: #e0e0e0;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* Header y Navbar */
-.navbar {
-    background-color: #1E1F29;
-    transition: all 0.3s ease-in-out; /* Para una transición suave */
-}
 
-.nav-link {
-    color: #e0e0e0;
-}
-
-.nav-link:hover {
-    color: #bb86fc;
-}
-
-.btn-primary {
-    background-color: #bb86fc;
-    border-color: #bb86fc;
-}
-
-.btn-primary:hover {
-    background-color: #03dac6;
-    border-color: #03dac6;
+.bigbrand{
+    font-size: 1.5em;
 }
 
 /* Imagen circular */
@@ -37,20 +28,16 @@ img.rounded-circle {
     border: 3px solid #bb86fc;
 }
 
-/* Sobre mí - Estilo de los títulos y la descripción */
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: #e0e0e0;
+.form-control {
+    font-size: 1rem;  /* Ajusta el tamaño de fuente si es necesario */
+    padding: 10px;  /* Asegura un buen espaciado interno */
 }
+
+/* Sobre mí - Estilo de los títulos y la descripción */
 
 .nombre-completo {
     font-size: 2.5rem;
     line-height: 1.2;
-}
-
-.descripcion {
-    font-family: 'Roboto Slab', serif;
-    color: #e0e0e0;
 }
 
 /* Sección de Correo en "Sobre mí" */
@@ -149,27 +136,6 @@ hr {
     border-top: 1px solid #bb86fc;
 }
 
-/* Responsive para tablet y móvil */
-@media (max-width: 768px) {
-    .technology-icon {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 576px) {
-    .technology-icon {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 11px;
-    }
-}
-
 /* Ajuste de espaciado entre la imagen y el texto */
 #sobre-mi {
     padding-left: 15px;
@@ -178,7 +144,7 @@ hr {
 /* Estilo para la imagen de perfil */
 .profile-image {
     width: 200px;
-    height: 100px;
+    height: 200px;
     object-fit: cover;
     object-position: 50% 5%;
     border-radius: 50%;

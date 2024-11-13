@@ -1,20 +1,22 @@
 {% extends "projects/base.html" %}
+{% load django_bootstrap5 %}
 {% block body_block %}
 
 <div class="container contact-page mt-5 pt-4">
     <h2 class="text-center">Contacto</h2>
 
     {% if messages %}
-      <div class="alert alert-success" role="alert">
-        {% for message in messages %}
-          {{ message }}
-        {% endfor %}
-      </div>
+        <div class="alert alert-success" role="alert">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
     {% endif %}
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <p class="lead text-center">Si tienes alguna pregunta, puedes escribirme directamente a mi correo <strong>kikoamarillo94@gmail.com</strong> o utilizar el formulario.</p>
+            <p class="lead text-center">Si tienes alguna pregunta o sugerencia, puedes escribirme directamente a mi correo
+                <strong><i class="fas fa-envelope"></i> kikoamarillo94@gmail.com</strong> o utilizar el formulario.</p>
         </div>
     </div>
 
@@ -22,15 +24,22 @@
         <div class="col-md-6">
             <form method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
+                {% bootstrap_form form %}
             </form>
         </div>
     </div>
 </div>
 
-<script>var editor = new MediumEditor('.editable');</script>
+<script>
+    // Inicializar QuillJS
+    var quill = new Quill('#quill-editor', {
+        theme: 'snow'
+    });
+
+    // Función para sincronizar contenido de Quill con el textarea antes de enviar
+    function syncQuillContent() {
+        document.getElementById('quill-textarea').value = quill.root.innerHTML;
+    }
+</script>
 
 {% endblock %}
