@@ -31,17 +31,11 @@ footer {
     margin-top: auto;
 }
 
+/* INDEX */
 .bigbrand{
     font-size: 1.5em;
 }
 
-.form-group label {
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-
-/* Estilo para la imagen de perfil */
 .profile-image {
     width: 200px;
     height: 200px;
@@ -51,8 +45,17 @@ footer {
     border: 3px solid #bb86fc;
 }
 
+/* CONTACT.HTML */
+.form-group label {
+    margin-bottom: 0.5rem;
+    display: block;
+}
 
-
+#editor .ql-editor {
+    color: #000000; /* Cambia el color del texto a negro */
+    font-size: 0.90rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
 
 
 

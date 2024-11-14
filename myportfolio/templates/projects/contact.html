@@ -2,7 +2,7 @@
 {% load django_bootstrap5 %}
 {% block body_block %}
 
-<div class="container contact-page mt-5 pt-4">
+<div class="container contact-page mt-3 pt-5">
     <h2 class="text-center">Contacto</h2>
 
     {% if messages %}
@@ -15,22 +15,50 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <p class="lead text-center">Si tienes alguna pregunta, puedes escribirme directamente a mi correo
-                <strong><i class="fas fa-envelope"></i> kikoamarillo94@gmail.com</strong> o utilizar el formulario.</p>
+            <p class="lead text-center">Rellena este formulario o escribe directamente a mi correo<br>
+                <strong><i class="fas fa-envelope"></i> kikoamarillo94@gmail.com</strong></p>
         </div>
     </div>
 
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center">
         <div class="col-md-6">
             <form method="POST">
                 {% csrf_token %}
                 {% bootstrap_field form.nombre %}
                 {% bootstrap_field form.email %}
+                {% bootstrap_field form.asunto %}
 
                 <!-- Quill editor container -->
                 <div class="form-group">
                     <label for="editor-container">Mensaje</label>
-                    <div id="editor-container" style="height: 200px; background-color: white;"></div>
+                    <div id="editor-container">
+                        <span class="ql-formats">
+                            <select class="ql-font"></select>
+                            <select class="ql-size"></select>
+                        </span>
+                        <span class="ql-formats mb-1">
+                            <select class="ql-align"></select>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-link"></button>
+                            <button class="ql-image"></button>
+                            <button class="ql-video"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-list" value="ordered"></button>
+                            <button class="ql-list" value="bullet"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-clean"></button>
+                        </span>
+                    </div>
+                    <div id="editor" style="height: 200px; background-color: white;">
+                    </div>
                 </div>
                 <!-- Hidden textarea that will hold the content from Quill -->
                 <textarea name="mensaje" id="mensaje" style="display:none;"></textarea>
@@ -44,16 +72,21 @@
 </div>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
     // Inicializar el editor Quill
-    var quill = new Quill('#editor-container', {
+    const quill = new Quill('#editor', {
+        modules: {
+            toolbar: '#editor-container',
+        },
         placeholder: 'Escribe tu mensaje',
         theme: 'snow'
     });
 
     // Actualizar el textarea oculto antes de enviar el formulario
-    document.querySelector('form').onsubmit = function() {
+    document.querySelector('form').onsubmit = function () {
         document.querySelector('#mensaje').value = quill.root.innerHTML;
     };
+});
 </script>
 
 {% endblock %}

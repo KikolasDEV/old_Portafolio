@@ -14,10 +14,11 @@ def contact(request):
         if form.is_valid():
             nombre = form.cleaned_data['nombre']
             email = form.cleaned_data['email']
+            asunto = form.cleaned_data['asunto']
             mensaje = form.cleaned_data['mensaje']
             send_mail(
-                'Nuevo mensaje de tu portafolio',
-                f'Nombre: {nombre}\nCorreo: {email}\nMensaje: {mensaje}',
+                f'Nuevo mensaje de tu portafolio -> {asunto}',
+                f'Nombre: {nombre}\nCorreo: {email}\nAsunto: {asunto}\nMensaje: {mensaje}',
                 os.getenv('MAIL_USERNAME'),
                 [os.getenv('MAIL_RECIPIENT')],
             )
