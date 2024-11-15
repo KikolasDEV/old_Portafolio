@@ -1,5 +1,5 @@
-.montserrat-regular {
-  font-family: "Montserrat", sans-serif;
+.markazi-text {
+  font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -19,30 +19,104 @@ html, body {
 }
 
 body {
-    background: linear-gradient(135deg, #2C2E3E, #1E1F29);
+    background-color: #1A1A1D;
     color: #e0e0e0;
 }
 
 footer {
     background-color: #1E1F29;
-    color: #e0e0e0;
+    color: #A64D79;
     padding: 20px 0;
     text-align: center;
     margin-top: auto;
 }
 
 /* INDEX */
-.bigbrand{
-    font-size: 1.5em;
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    background-color: #1A1A1D;
+    pointer-events: none;
+}
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#sobre-mi {
+    position: relative;
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: calc(-50vw + 50%);
+}
+
+#sobre-mi .content-wrapper {
+    max-width: 100%; /* Limita el ancho del contenido */
+    max-height: auto;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 15px; /* Agrega padding lateral para dispositivos pequeños */
+    position: relative;
+    z-index: 1;
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     object-position: 50% 5%;
     border-radius: 50%;
-    border: 3px solid #bb86fc;
+    margin-bottom: 10px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.logo-text {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nombre-completo {
+    font-size: 2.5rem;
+}
+
+.descripcion {
+    font-size: 2rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.icons-section .social-links a {
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .card-img-top {
@@ -97,10 +171,3 @@ footer {
     font-size: 0.90rem; /* Tamaño de fuente */
     line-height: 1.5; /* Altura de línea para mejor legibilidad */
 }
-
-
-
-
-
-
-

@@ -2,47 +2,42 @@
 {% load static %}
 {% block body_block %}
 
-<div class="container mt-5 pt-4">
-    <section id="sobre-mi" class="d-flex align-items-center">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image">
-            </div>
-            <div class="col-md-8 d-flex align-items-center">
-                <div>
-                    <h1 class="display-4 nombre-completo">José Francisco González Amarillo</h1>
-                    <p class="lead descripcion">Desarrollador de software con experiencia en Python y frameworks como Django, Flask, Jinja y Bootstrap. Mi objetivo es especializarme en Python así como seguir aumentando conocimiento sobre otras tecnologías.</p>
-                    <div class="email-section mt-2">
-                        <i class="fas fa-envelope"></i>
-                        <span class="email-text ms-2">kikoamarillo94@gmail.com</span>
+<div class="container mt-5 pt-3">
+    <section id="sobre-mi" class="d-flex align-items-center mt-5 pt-5 pb-5 russo-one-regular">
+        <div id="particles-js"></div>
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3">
+                    <div class="mt-3">
+                        <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-primary me-2" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
+                        Descargar CV
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 d-flex flex-column justify-content-center align-items-end text-end">
+                    <h1 class="nombre-completo">José Francisco González Amarillo</h1>
+                    <h2 class="lead descripcion">FullStack Developer Jr.</h2>
+                    <div class="icons-section mt-3">
+                        <div class="social-links mt-2">
+                            <img src="{% static 'images/email_icon.png' %}" alt="Email Icon" class="icon me-2">
+                            kikoamarillo94@gmail.com
+                            <a href="https://www.linkedin.com/in/kikoamarillo/" target="_blank" class="me-3">
+                                <img src="{% static 'images/linkedin_icon.png' %}" alt="LinkedIn Icon" class="icon">
+                            </a>
+                            <a href="https://github.com/KikolasDEV" target="_blank">
+                                <img src="{% static 'images/tecnologias/Github_light.svg' %}" alt="GitHub Icon" class="icon">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr class="my-4">
-
-    <!-- Sección: Experiencia -->
-    <section id="experiencia" class="mt-5">
-        <h2 class="text-center">Experiencia Laboral</h2>
-        <div class="row mt-4">
-            <div class="col-12">
-                <h4><strong>Junior Software Developer - Abaco Developments</strong></h4>
-                <p>Abril 2024 - Junio 2024</p>
-                <ul>
-                    <li>Desarrollé aplicaciones utilizando Python y FlySpeed SQL.</li>
-                    <li>Colaboré en la optimización de bases de datos y análisis de datos.</li>
-                    <li>Participé en el desarrollo de soluciones para mejorar la organización y trabajo en equipo.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <hr class="my-4">
 
     <!-- Sección: Proyectos -->
-    <section id="proyectos" class="mt-5">
+    <section id="proyectos" class="mt-5 pt-5">
         <h2 class="text-center">Proyectos</h2>
         <div class="row justify-content-center mt-4">
 
@@ -90,8 +85,6 @@
         </div>
     </section>
 
-    <hr class="my-4">
-
         <!-- Sección: Tecnologías y Herramientas con Animación -->
     <section id="tecnologias" class="mt-5">
         <h2 class="text-center">Tecnologías y Herramientas</h2>
@@ -134,15 +127,34 @@
         </div>
     </section>
 
-    <hr class="my-4">
+    <!-- Sección Experiencia y Formación en dos columnas -->
+    <section id="info-profesional" class="mt-5">
+        <div class="row">
+            <!-- Columna de Experiencia -->
+            <div class="col-md-6">
+                <h2 class="text-center">Experiencia Laboral</h2>
+                <div class="mt-4">
+                    <h4><strong>Junior Software Developer - Abaco Developments</strong></h4>
+                    <p>Abril 2024 - Junio 2024</p>
+                    <ul>
+                        <li>Desarrollé aplicaciones utilizando Python y FlySpeed SQL.</li>
+                        <li>Colaboré en la optimización de bases de datos y análisis de datos.</li>
+                        <li>Participé en el desarrollo de soluciones para mejorar la organización y trabajo en equipo.</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- Sección: Formación -->
-    <section id="formacion" class="mt-5">
-        <h2>Formación</h2>
-        <p><strong>Udemy Certificate: Python and Django FullStack Web Developer Bootcamp</strong> - Jose Portilla | Octubre 2024 - Noviembre 2024</p>
-        <p><strong>Udemy Certificate: The Complete Python Pro Bootcamp</strong> - Angela Yu | Junio 2024 - Agosto 2024</p>
-        <p><strong>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</strong> - IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
-        <p><strong>Grado en Arte Dramático</strong> - E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
+            <!-- Columna de Formación -->
+            <div class="col-md-6">
+                <h2 class="text-center">Formación</h2>
+                <div class="mt-4">
+                    <p><strong>Udemy Certificate: Python and Django FullStack Web Developer Bootcamp</strong> - Jose Portilla | Octubre 2024 - Noviembre 2024</p>
+                    <p><strong>Udemy Certificate: The Complete Python Pro Bootcamp</strong> - Angela Yu | Junio 2024 - Agosto 2024</p>
+                    <p><strong>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</strong> - IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
+                    <p><strong>Grado en Arte Dramático</strong> - E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 

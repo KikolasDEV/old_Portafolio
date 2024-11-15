@@ -13,93 +13,49 @@
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <!-- Enlace a Font Awesome (para iconos) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 <body class="loader d-flex flex-column min-vh-100">
     <nav class="navbar bg-body-tertiary border-bottom border-body fixed-top russo-one-regular" data-bs-theme="dark">
-        <div class="container-fluid">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="navbar-brand bigbrand" href="{% url 'index' %}">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
-                </li>
-            </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+            <img src="{% static 'images/KikolasDEV_logo.png' %}" alt="Logo KikolasDEV" class="logo-icon me-2">
+            <span>KikolasDEV</span>
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Stack</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Experiencia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-            <ul class="nav justify-content-end">
-                <!-- Botón para Descargar CV -->
-                <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-primary me-2" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
-                    Descargar CV
-                </a>
-                <!-- Botón de LinkedIn -->
-                <a href="https://www.linkedin.com/in/kikoamarillo/" target="_blank" class="btn btn-outline-light me-2">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <!-- Botón de GitHub -->
-                <a href="https://github.com/KikolasDEV" target="_blank" class="btn btn-outline-light">
-                    <i class="fab fa-github"></i>
-                </a>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container flex-grow-1 montserrat-regular">
+    <div class="container flex-grow-1 markazi-text">
         {% block body_block %}
 
         {% endblock %}
     </div>
 
-
-<script type="x-shader/x-fragment">#version 300 es
-/*********
-* made by Matthias Hurrle (@atzedent)
-*/
-precision highp float;
-out vec4 O;
-uniform float time;
-uniform vec2 resolution;
-#define FC gl_FragCoord.xy
-#define R resolution
-#define T time
-#define hue(a) (.6+.6*cos(6.3*(a)+vec3(0,83,21)))
-float rnd(float a) {
-	vec2 p=fract(a*vec2(12.9898,78.233));	p+=dot(p,p*345.);
-	return fract(p.x*p.y);
-}
-vec3 pattern(vec2 uv) {
-	vec3 col=vec3(0);
-	for (float i=.0; i++<20.;) {
-		float a=rnd(i);
-		vec2 n=vec2(a,fract(a*34.56)), p=sin(n*(T+7.)+T*.5);
-		float d=dot(uv-p,uv-p);
-		col+=.00125/d*hue(dot(uv,uv)+i*.125+T);
-	}
-	return col;
-}
-void main(void) {
-	vec2 uv=(FC-.5*R)/min(R.x,R.y);
-	vec3 col=vec3(0);
-	float s=2.4,
-	a=atan(uv.x,uv.y),
-	b=length(uv);
-	uv=vec2(a*5./6.28318,.05/tan(b)+T);
-	uv=fract(uv)-.5;
-	col+=pattern(uv*s);
-	O=vec4(col,1);
-}</script>
 <!-- Enlace a los archivos JavaScript -->
 <script src="{% static 'js/editor.js' %}"></script>
-<!--<script src="{% static 'js/gametransition.js' %}"></script>-->
+<!-- particles.js library -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js library -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="{% static 'js/particles.js' %}"></script>
 </body>
 
 <footer class="bg-dark text-center text-light py-4">
