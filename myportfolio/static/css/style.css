@@ -19,19 +19,95 @@ html, body {
 }
 
 body {
-    background-color: #1A1A1D;
-    color: #e0e0e0;
+    background-color: #000000;
+    color: #F5EDED;
 }
 
+/* Estilos del footer */
 footer {
     background-color: #1E1F29;
-    color: #A64D79;
+    color: #F5EDED;
     padding: 20px 0;
     text-align: center;
     margin-top: auto;
+    font-size: 1rem;
 }
 
-/* INDEX */
+footer .nav-link {
+    color: #F5EDED;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+footer .nav-link:hover {
+    color: #D72323;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-info .footer-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-info .footer-icon + span {
+    vertical-align: middle;
+    font-size: 1rem;
+}
+
+.footer-info a {
+    color: #F5EDED;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    color: #D72323;
+}
+
+.footer-info .d-flex {
+    align-items: center;
+    gap: 8px; /* Espacio entre elementos */
+}
+
+
+/* ---------------------- NAVBAR ---------------------- */
+.logotype {
+    font-size: 1.5rem;
+    color: #F5EDED;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    color: #F5EDED;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.nav-link:hover {
+    color: #D72323;
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform:translate(0px,5px);
+}
+
+.navbar-top {
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-scrolled {
+    background-color: #1E1F29;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* ---------------------- INDEX ---------------------- */
 /* ---- particles.js container ---- */
 #particles-js {
     position: absolute;
@@ -40,7 +116,7 @@ footer {
     z-index: -1;
     width: 100vw;
     height: 100%;
-    background-color: #1A1A1D;
+    background-color: #000000;
     pointer-events: none;
 }
 .count-particles {
@@ -160,7 +236,7 @@ footer {
     }
 }
 
-/* CONTACT.HTML */
+/* ---------------------- CONTACT.HTML ---------------------- */
 .form-group label {
     margin-bottom: 0.5rem;
     display: block;
