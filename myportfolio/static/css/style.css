@@ -19,11 +19,15 @@ html, body {
 }
 
 body {
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: #000000;
+    margin: 0;
+    padding: 0;
     color: #F5EDED;
 }
 
-/* Estilos del footer */
+/* ---------------------- FOOTER ---------------------- */
 footer {
     background-color: #1E1F29;
     color: #F5EDED;
@@ -111,11 +115,11 @@ footer .nav-link:hover {
 /* ---- particles.js container ---- */
 #particles-js {
     position: absolute;
-    top: 0;
+    top: -150px;
     left: 0;
     z-index: -1;
     width: 100vw;
-    height: 100%;
+    height: calc(100% + 150px);
     background-color: #000000;
     pointer-events: none;
 }
@@ -142,8 +146,8 @@ footer .nav-link:hover {
 #sobre-mi {
     position: relative;
     width: 100vw; /* Ocupa el ancho completo de la pantalla */
-    overflow: hidden;
-    padding-left: 0;
+    overflow: visible;
+    padding: 0;
     padding-right: 0;
     margin-left: calc(-50vw + 50%);
 }
