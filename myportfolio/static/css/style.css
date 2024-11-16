@@ -3,6 +3,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-size: 1.5rem;
 }
 
 .russo-one-regular {
@@ -31,7 +32,7 @@ body {
 footer {
     background-color: #1E1F29;
     color: #F5EDED;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     margin-top: auto;
     font-size: 1rem;
@@ -39,7 +40,7 @@ footer {
 
 footer .nav-link {
     color: #F5EDED;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-decoration: none;
     margin-right: 15px;
 }
@@ -53,13 +54,13 @@ footer .nav-link:hover {
 }
 
 .footer-info .footer-icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 
 .footer-info .footer-icon + span {
     vertical-align: middle;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .footer-info a {
@@ -183,6 +184,8 @@ footer .nav-link:hover {
 
 .nombre-completo {
     font-size: 2.5rem;
+    line-height: 1.2;
+    text-align: right;
 }
 
 .descripcion {
@@ -241,13 +244,47 @@ footer .nav-link:hover {
 }
 
 /* ---------------------- CONTACT.HTML ---------------------- */
+
+.lead {
+    font-size: 1.75rem;
+}
+
 .form-group label {
     margin-bottom: 0.5rem;
     display: block;
+}
+
+.form-control {
+    font-size: 1.5rem;
+    padding: 15px;
+    height: 45px;
+}
+
+.btn-contact {
+    color: #000000;
+    font-size: 2rem;
+    padding: 15px 40px;
+    border-radius: 8px;
+    width: 300px;
+    height: auto;
+    transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+}
+
+.btn-contact:hover {
+    transform: scale3d(1.5, 1.5, 0.3);
+    -webkit-transform: scale3d(1.5, 1.5, 0.3);
+    -moz-transform: scale3d(1.5, 1.5, 0.3);
 }
 
 #editor .ql-editor {
     color: #000000; /* Cambia el color del texto a negro */
     font-size: 0.90rem; /* Tamaño de fuente */
     line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+.gmail-contact {
+    width: 20px;
+    height: 20px;
 }
