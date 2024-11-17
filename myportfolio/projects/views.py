@@ -27,3 +27,12 @@ def contact(request):
     else:
         form = ContactForm()
     return render(request, 'projects/contact.html', {'form': form})
+
+def backend(request):
+    return render(request, 'projects/backend.html')
+
+def websites(request):
+    return render(request, 'projects/websites.html')
+
+def games(request):
+    return render(request, 'projects/games.html')

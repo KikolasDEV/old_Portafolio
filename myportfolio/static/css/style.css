@@ -74,7 +74,7 @@ footer .nav-link:hover {
 
 .footer-info .d-flex {
     align-items: center;
-    gap: 8px; /* Espacio entre elementos */
+    gap: 8px;
 }
 
 
@@ -95,9 +95,9 @@ footer .nav-link:hover {
 .nav-link:hover {
     color: #D72323;
     box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
-    transform: translate(0px,5px);
-    -webkit-transform: translate(0px,5px);
-    -moz-transform:translate(0px,5px);
+    transform: translate(5px,0px);
+    -webkit-transform: translate(5px,0px);
+    -moz-transform: translate(5px,0px);
 }
 
 .navbar-top {
@@ -177,29 +177,28 @@ footer .nav-link:hover {
     vertical-align: middle;
 }
 
-.logo-text {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
 .nombre-completo {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     line-height: 1.2;
     text-align: right;
 }
 
-.descripcion {
-    font-size: 2rem;
+.index-descripcion {
+    font-size: 2.25rem;
+    color: #D72323;
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .icons-section .social-links a {
     display: inline-block;
-    margin-right: 15px;
+}
+
+.social-links{
+    font-size: 1.25rem;
 }
 
 .card-img-top {
@@ -244,8 +243,7 @@ footer .nav-link:hover {
 }
 
 /* ---------------------- CONTACT.HTML ---------------------- */
-
-.lead {
+.contact-descripcion {
     font-size: 1.75rem;
 }
 

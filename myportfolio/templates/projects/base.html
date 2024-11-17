@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - José Francisco González Amarillo</title>
+    <title>KikolasDEV</title>
    <!-- Bootstrap Links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -49,22 +49,8 @@
         {% endblock %}
     </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navbar = document.querySelector(".navbar");
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 50) {
-                navbar.classList.remove("navbar-top");
-                navbar.classList.add("navbar-scrolled");
-            } else {
-                navbar.classList.add("navbar-top");
-                navbar.classList.remove("navbar-scrolled");
-            }
-        });
-    });
-</script>
-
 <!-- Enlace a los archivos JavaScript -->
+<script src="{% static 'js/scroll.js' %}"></script>
 <script src="{% static 'js/editor.js' %}"></script>
 <!-- particles.js library -->
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -97,14 +83,14 @@
         <div class="footer-info d-flex flex-column align-items-end text-end markazi-text">
             <p class="mb-2">&copy; 2024 KikolasDEV by José Francisco González Amarillo</p>
             <div class="d-flex align-items-center pt-1">
-                <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="footer-icon mb-1">
-                <span class="me-4 ms-1">kikoamarillo94@gmail.com</span>
                 <a href="https://www.linkedin.com/in/kikoamarillo/" target="_blank" class="me-2">
-                    <img src="{% static 'images/logos/linkedin.svg' %}" alt="LinkedIn Icon" class="footer-icon mb-1">
+                    <img src="{% static 'images/logos/linkedin.svg' %}" alt="LinkedIn Icon" class="footer-icon mb-2">
                 </a>
                 <a href="https://github.com/KikolasDEV" target="_blank" class="me-3">
-                    <img src="{% static 'images/tecnologias/github.svg' %}" alt="GitHub Icon" class="footer-icon mb-1">
+                    <img src="{% static 'images/tecnologias/github.svg' %}" alt="GitHub Icon" class="footer-icon mb-2 ms-1">
                 </a>
+                <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="footer-icon mb-2">
+                <span class="me-4 ms-1 mb-1">kikoamarillo94@gmail.com</span>
             </div>
         </div>
     </div>
