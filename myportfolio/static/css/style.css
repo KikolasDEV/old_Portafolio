@@ -84,6 +84,12 @@ footer .nav-link:hover {
     color: #F5EDED;
 }
 
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
 .nav-link {
     font-size: 1.5rem;
     color: #F5EDED;
@@ -163,18 +169,60 @@ footer .nav-link:hover {
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 235px;
+    height: 235px;
     object-fit: cover;
     object-position: 50% 5%;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
+.ubicacion {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #F5EDED;
+    white-space: nowrap;
+}
+
+.ubicacion-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.btn-primary {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.writing {
+    display: inline-block;
+    color: #F5EDED;
+    font-size: 2.25rem;
+}
+
+#cursor {
+    display: inline-block;
+    color: #F5EDED;
+    font-size: 2.5rem;
+    animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 .nombre-completo {
@@ -186,6 +234,7 @@ footer .nav-link:hover {
 .index-descripcion {
     font-size: 2.25rem;
     color: #D72323;
+    padding-top: 10px;
 }
 
 .icon {
@@ -193,12 +242,17 @@ footer .nav-link:hover {
     height: 30px;
 }
 
-.icons-section .social-links a {
-    display: inline-block;
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
 }
 
-.social-links{
-    font-size: 1.25rem;
+.email {
+    font-size: 1.1rem;
+    color: #F5EDED;
+    margin-left: 5px;
 }
 
 .card-img-top {

@@ -6,31 +6,38 @@
     <section id="sobre-mi" class="d-flex align-items-center mt-5 pt-5 pb-5 russo-one-regular">
         <div id="particles-js"></div>
         <div class="content-wrapper">
-            <div class="row">
+            <div class="row align-items-center">
+                <!-- Columna Izquierda -->
                 <div class="col-md-4 text-center px-5 py-5">
                     <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3">
-                    <div class="mt-4 ms-5">
-                        <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-primary me-2" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
-                        Descargar CV
-                        </a>
-                        <a href="https://www.linkedin.com/in/kikoamarillo/" target="_blank">
-                            <img src="{% static 'images/logos/linkedin.svg' %}" alt="LinkedIn Icon" class="icon mx-3">
-                        </a>
-                        <a href="https://github.com/KikolasDEV" target="_blank">
-                            <img src="{% static 'images/tecnologias/github.svg' %}" alt="GitHub Icon" class="icon mx-3">
-                        </a>
+                    <div class="ubicacion-container d-flex align-items-center justify-content-center">
+                        <div class="ubicacion">
+                            <img src="{% static 'images/logos/ubicacion.png' %}" alt="Ubicación" class="icon me-2">
+                            <span>Jerez de la Frontera, España</span>
+                        </div>
                     </div>
+                    <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-primary mt-3" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
+                        Descargar CV
+                    </a>
                 </div>
+
+                <!-- Columna Derecha -->
                 <div class="col-md-8 d-flex flex-column justify-content-center align-items-end text-end px-5">
                     <h1 class="nombre-completo">
-                        José Francisco<br>
+                        <span id="dynamic-name" class="writing"></span><span id="cursor">|</span><br>
                         González Amarillo
                     </h1>
                     <h2 class="lead index-descripcion">FullStack Developer Jr.</h2>
                     <div class="icons-section mt-3">
-                        <div class="social-links mt-2">
-                            <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="icon me-2">
-                            kikoamarillo94@gmail.com
+                        <div class="social-links mt-2 d-flex align-items-center">
+                            <a href="https://www.linkedin.com/in/kikoamarillo/" target="_blank">
+                                <img src="{% static 'images/logos/linkedin.svg' %}" alt="LinkedIn Icon" class="icon">
+                            </a>
+                            <a href="https://github.com/KikolasDEV" target="_blank">
+                                <img src="{% static 'images/tecnologias/github.svg' %}" alt="GitHub Icon" class="icon mx-2">
+                            </a>
+                            <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="icon me-1">
+                            <span class="email">kikoamarillo94@gmail.com</span>
                         </div>
                     </div>
                 </div>
