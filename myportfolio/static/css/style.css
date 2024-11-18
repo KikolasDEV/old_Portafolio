@@ -12,6 +12,8 @@
   font-style: normal;
 }
 
+/* ---------------------- GENERAL ---------------------- */
+/* -------- Body -------- */
 html, body {
     height: 100%;
     margin: 0;
@@ -22,15 +24,15 @@ html, body {
 body {
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: #000000;
+    background-color: #111;
     margin: 0;
     padding: 0;
     color: #F5EDED;
 }
 
-/* ---------------------- FOOTER ---------------------- */
+/* -------- Footer -------- */
 footer {
-    background-color: #1E1F29;
+    background-color: #18151f;
     color: #F5EDED;
     padding: 10px 0;
     text-align: center;
@@ -77,6 +79,29 @@ footer .nav-link:hover {
     gap: 8px;
 }
 
+/* -------- Buttons -------- */
+:root {
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%);
+}
+
+.btn {
+  border: 5px solid;
+  border-image-slice: 1;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: var(--gradient);
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.btn:hover, .btn:focus {
+  background: var(--gradient);
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: #fff;
+  border: 5px solid #fff;
+  box-shadow: #222 1px 0 10px;
+}
 
 /* ---------------------- NAVBAR ---------------------- */
 .logotype {
@@ -85,8 +110,8 @@ footer .nav-link:hover {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     vertical-align: middle;
 }
 
@@ -113,13 +138,13 @@ footer .nav-link:hover {
 }
 
 .navbar-scrolled {
-    background-color: #1E1F29;
+    background-color: #18151f;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
 }
 
 /* ---------------------- INDEX ---------------------- */
-/* ---- particles.js container ---- */
+/* -------- particles.js container -------- */
 #particles-js {
     position: absolute;
     top: -150px;
@@ -127,7 +152,7 @@ footer .nav-link:hover {
     z-index: -1;
     width: 100vw;
     height: calc(100% + 150px);
-    background-color: #000000;
+    background-color: #111;
     pointer-events: none;
 }
 .count-particles {
@@ -150,6 +175,7 @@ footer .nav-link:hover {
     font-size: 1.1em;
 }
 
+/* -------- Sección SOBRE-MÍ -------- */
 #sobre-mi {
     position: relative;
     width: 100vw; /* Ocupa el ancho completo de la pantalla */
@@ -196,10 +222,10 @@ footer .nav-link:hover {
 }
 
 
-.btn-primary {
+.btn-descargar {
     font-size: 1.1rem;
     padding: 10px 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 
@@ -238,8 +264,8 @@ footer .nav-link:hover {
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 }
 
 .social-links {
@@ -250,17 +276,129 @@ footer .nav-link:hover {
 }
 
 .email {
-    font-size: 1.1rem;
-    color: #F5EDED;
+    font-size: 1.2rem;
     margin-left: 5px;
 }
 
-.card-img-top {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
+/* -------- Sección PROYECTOS -------- */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap");
+
+#proyectos {
+    font-family: "Baloo 2", cursive;
+    padding: 2rem 0;
+    background-color: #111;
 }
 
+#proyectos .postcard {
+    display: flex;
+    background-color: #18151f;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#proyectos .postcard__img_link {
+    display: contents;
+}
+
+#proyectos .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Recorte diagonal */
+    transition: transform 0.3s ease-in-out;
+}
+
+#proyectos .postcard:hover .postcard__img {
+    transform: scale(1.1);
+}
+
+#proyectos .postcard__text {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F5EDED;
+}
+
+#proyectos .postcard__title {
+    font-size: 1.8rem;
+    color: #D72323;
+    margin-bottom: 0.5rem;
+}
+
+#proyectos .postcard__subtitle {
+    font-size: 0.8rem;
+    color: #cfcfcf;
+    padding-top: 5px;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+#proyectos .postcard__subtitle i {
+    margin-right: 8px;
+}
+
+#proyectos .postcard__bar {
+    width: 50px;
+    height: 4px;
+    background-color: #D72323;
+    margin-bottom: 1rem;
+}
+
+#proyectos .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+#proyectos .postcard__tagbox {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#proyectos .tag__item {
+    font-size: 0.9rem;
+    color: #fff;
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 0.4rem 0.8rem;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+#proyectos .tag__item:hover {
+    background-color: #D72323;
+    color: #fff;
+}
+
+#proyectos .tag__item i {
+    font-size: 0.9rem;
+}
+
+/* Para dispositivos mayores a 768px */
+@media screen and (min-width: 768px) {
+    #proyectos .postcard {
+        flex-direction: row;
+    }
+
+    #proyectos .postcard:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+}
+
+/* ---- Sección STACK ---- */
 .slider {
     width: 75vw;
     height: auto;
@@ -313,21 +451,10 @@ footer .nav-link:hover {
 }
 
 .btn-contact {
-    color: #000000;
     font-size: 2rem;
     padding: 15px 40px;
-    border-radius: 8px;
     width: 300px;
     height: auto;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
-}
-
-.btn-contact:hover {
-    transform: scale3d(1.5, 1.5, 0.3);
-    -webkit-transform: scale3d(1.5, 1.5, 0.3);
-    -moz-transform: scale3d(1.5, 1.5, 0.3);
 }
 
 #editor .ql-editor {

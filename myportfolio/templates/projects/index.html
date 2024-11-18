@@ -3,8 +3,10 @@
 {% block body_block %}
 
 <div class="container py-5">
+
+    <!-- Sección: SOBRE-MÍ -->
     <section id="sobre-mi" class="d-flex align-items-center mt-5 pt-5 pb-5 russo-one-regular">
-        <div id="particles-js"></div>
+        <!--<div id="particles-js"></div>-->
         <div class="content-wrapper">
             <div class="row align-items-center">
                 <!-- Columna Izquierda -->
@@ -16,7 +18,7 @@
                             <span>Jerez de la Frontera, España</span>
                         </div>
                     </div>
-                    <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-primary mt-3" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
+                    <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-descargar mt-3" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
                         Descargar CV
                     </a>
                 </div>
@@ -37,65 +39,93 @@
                                 <img src="{% static 'images/tecnologias/github.svg' %}" alt="GitHub Icon" class="icon mx-2">
                             </a>
                             <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="icon me-1">
-                            <span class="email">kikoamarillo94@gmail.com</span>
+                            <span class="email mt-1">kikoamarillo94@gmail.com</span>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--<div class="frase-celebre">
+                <p>"Somos individuos únicos y auténticos que nos conformamos con respuestas programadas. Bastaría con alterar los parámetros."</p>
+            </div>-->
         </div>
     </section>
 
 
     <!-- Sección: Proyectos -->
-    <section id="proyectos" class="mt-5 pt-5">
-        <h2 class="text-center">Proyectos</h2>
-        <div class="row justify-content-center mt-4">
+    <section id="proyectos" class="dark">
+        <div class="container">
+            <h1 class="h1 text-center russo-one-regular mb-5">Proyectos</h1>
 
-            <!-- Tarjeta del proyecto "Blog Capstone Project" -->
-            <div class="col-md-5">
-                <div class="card mb-4 shadow-sm">
-                    <img src="{% static 'images/proyectos/blogangela.png' %}" class="card-img-top" alt="Blog Capstone Project Image">
-                    <div class="card-body">
-                        <h5 class="card-title">Blog Capstone Project</h5>
-                        <p class="card-text">
-                            Un proyecto completo de desarrollo de un blog usando Python, Flask, RESTful Routing y SQLAlchemy. Implementación de autenticación, publicación, edición y borrado de entradas (añadiendo permisos específicos de admin y usuarios) y gestión de bases de datos.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/KikolasDEV/blog-capstone-project" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                            <div>
-                                <i class="fab fa-python technology-icon"></i>
-                                <i class="fas fa-flask technology-icon"></i>
-                                <i class="fas fa-code technology-icon"></i>
-                                <i class="fab fa-bootstrap technology-icon"></i>
-                            </div>
-                        </div>
+            <!-- Tarjeta Proyecto 1 -->
+            <article class="postcard">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="https://picsum.photos/800/400" alt="Proyecto 1">
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title">Proyecto 1</h1>
+                    <div class="postcard__subtitle">
+                        <i class="fas fa-calendar-alt"></i> Enero, 2023
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <p class="postcard__preview-txt">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores commodi corporis eius eligendi enim est eum eveniet impedit laboriosam, magni, nemo nostrum quae quasi quis tempora ullam vero.
+                    </p>
+                    <div class="postcard__tagbox">
+                        <span class="tag__item"><i class="fas fa-tag"></i> Backend</span>
+                        <span class="tag__item"><i class="fas fa-clock"></i> 3 meses</span>
+                        <a href="#" class="tag__item"><i class="fab fa-github"></i> Ver en GitHub</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Tarjeta del proyecto "VirtualVault" -->
-            <div class="col-md-5">
-                <div class="card mb-4 shadow-sm">
-                    <img src="{% static 'images/proyectos/virtualvault.png' %}" class="card-img-top" alt="VirtualVault Project Image">
-                    <div class="card-body">
-                        <h5 class="card-title">VirtualVault</h5>
-                        <p class="card-text">
-                            Aplicación de Flutter diseñada para proporcionar una experiencia de compra en línea sencilla y efectiva. La aplicación permite a los usuarios explorar productos, gestionar favoritos, añadir artículos al carrito y realizar pedidos. Además, incluye funcionalidades de administrador.
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="https://github.com/KikolasDEV/VirtualVault" class="btn btn-primary" target="_blank">Ver en GitHub</a>
-                            <div>
-                                <i class="fas fa-code technology-icon"></i>
-                                <i class="fas fa-mobile-alt technology-icon"></i>
-                            </div>
-                        </div>
+            <!-- Tarjeta Proyecto 2 -->
+            <article class="postcard">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="https://picsum.photos/800/400" alt="Proyecto 2">
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title">Proyecto 2</h1>
+                    <div class="postcard__subtitle">
+                        <i class="fas fa-calendar-alt"></i> Junio, 2023
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <p class="postcard__preview-txt">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores commodi corporis eius eligendi enim est eum eveniet impedit laboriosam, magni, nemo nostrum quae quasi quis tempora ullam vero.
+                    </p>
+                    <div class="postcard__tagbox">
+                        <span class="tag__item"><i class="fas fa-tag"></i> Web</span>
+                        <span class="tag__item"><i class="fas fa-clock"></i> 2 meses</span>
+                        <a href="#" class="tag__item"><i class="fab fa-github"></i> Ver en GitHub</a>
                     </div>
                 </div>
-            </div>
+            </article>
+
+            <!-- Tarjeta Proyecto 3 -->
+            <article class="postcard">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="https://picsum.photos/800/400" alt="Proyecto 3">
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title">Proyecto 3</h1>
+                    <div class="postcard__subtitle">
+                        <i class="fas fa-calendar-alt"></i> Diciembre, 2023
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <p class="postcard__preview-txt">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores commodi corporis eius eligendi enim est eum eveniet impedit laboriosam, magni, nemo nostrum quae quasi quis tempora ullam vero.
+                    </p>
+                    <div class="postcard__tagbox">
+                        <span class="tag__item"><i class="fas fa-tag"></i> Games</span>
+                        <span class="tag__item"><i class="fas fa-clock"></i> 4 meses</span>
+                        <a href="#" class="tag__item"><i class="fab fa-github"></i> Ver en GitHub</a>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
-        <!-- Sección: Tecnologías y Herramientas con Animación -->
+
+    <!-- Sección: Tecnologías y Herramientas con Animación -->
     <section id="tecnologias" class="mt-5">
         <h2 class="text-center">Tecnologías y Herramientas</h2>
         <div class="slider">
@@ -137,7 +167,7 @@
         </div>
     </section>
 
-    <!-- Sección Experiencia y Formación en dos columnas -->
+    <!-- Sección: Experiencia y Formación en dos columnas -->
     <section id="info-profesional" class="mt-5">
         <div class="row">
             <!-- Columna de Experiencia -->
