@@ -4,13 +4,12 @@
 
 <div class="container py-5">
 
-    <!-- Sección: SOBRE-MÍ -->
-    <section id="sobre-mi" class="d-flex align-items-center mt-5 pt-5 pb-5 russo-one-regular">
-        <!--<div id="particles-js"></div>-->
+    <!-- Sección: PRESENTACIÓN -->
+    <section id="presentacion" class="d-flex align-items-center mt-5 pt-5 pb-5 russo-one-regular">
         <div class="content-wrapper">
             <div class="row align-items-center">
                 <!-- Columna Izquierda -->
-                <div class="col-md-4 text-center px-5 py-5">
+                <div class="col-md-4 text-start px-5 py-5">
                     <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3">
                     <div class="ubicacion-container d-flex align-items-center justify-content-center">
                         <div class="ubicacion">
@@ -53,17 +52,30 @@
                     </div>
                 </div>
             </div>
-            <!--<div class="frase-celebre">
-                <p>"Somos individuos únicos y auténticos que nos conformamos con respuestas programadas. Bastaría con alterar los parámetros."</p>
-            </div>-->
+            <div class="technologies mt-5 pt-5 mb-5">
+                <div class="tech-grid">
+                    <img src="{% static 'images/tecnologias/python.svg' %}" alt="python">
+                    <img src="{% static 'images/tecnologias/django.svg' %}" alt="django">
+                    <img src="{% static 'images/tecnologias/flask.svg' %}" alt="flask">
+                    <img src="{% static 'images/tecnologias/html.svg' %}" alt="html">
+                    <img src="{% static 'images/tecnologias/css.svg' %}" alt="css">
+                    <img src="{% static 'images/tecnologias/bootstrap.svg' %}" alt="bootstrap">
+                    <img src="{% static 'images/tecnologias/javascript.svg' %}" alt="javascript">
+                    <img src="{% static 'images/tecnologias/mysql.svg' %}" alt="mysql">
+                    <img src="{% static 'images/tecnologias/postgresql.svg' %}" alt="postgresql">
+                    <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="sqlite">
+                    <img src="{% static 'images/tecnologias/git.svg' %}" alt="git">
+                    <img src="{% static 'images/tecnologias/github.svg' %}" alt="github">
+                </div>
+            </div>
         </div>
     </section>
 
 
     <!-- Sección: Proyectos -->
-    <section id="proyectos" class="dark">
+    <section id="proyectos" class="dark mt-5">
         <div class="container">
-            <h1 class="h1 text-center russo-one-regular mb-5">Proyectos</h1>
+            <h2 class="h2 text-center russo-one-regular mb-5">Proyectos</h2>
 
             <!-- Tarjeta Proyecto 1 -->
             <article class="postcard">
@@ -158,77 +170,81 @@
     </section>
 
 
-    <!-- Sección: Tecnologías y Herramientas con Animación -->
-    <section id="tecnologias" class="mt-5">
-        <h2 class="text-center">Tecnologías y Herramientas</h2>
-        <div class="slider">
-            <div class="slide-track">
-                <div class="slide"><img src="{% static 'images/tecnologias/python.svg' %}" alt="python"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/django.svg' %}" alt="django"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/flask.svg' %}" alt="flask"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/git.svg' %}" alt="git"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/github.svg' %}" alt="github"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/html.svg' %}" alt="html"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/css.svg' %}" alt="css"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/javascript.svg' %}" alt="javascript"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/bootstrap.svg' %}" alt="bootstrap"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/java.svg' %}" alt="java"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/mysql.svg' %}" alt="mysql"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/postgresql.svg' %}" alt="postgresql"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="sqlite"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/csharp.svg' %}" alt="csharp"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/godot.svg' %}" alt="godot"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/unity.svg' %}" alt="unity"></div>
-
-                <div class="slide"><img src="{% static 'images/tecnologias/python.svg' %}" alt="python"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/django.svg' %}" alt="django"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/flask.svg' %}" alt="flask"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/git.svg' %}" alt="git"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/github.svg' %}" alt="github"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/html.svg' %}" alt="html"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/css.svg' %}" alt="css"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/javascript.svg' %}" alt="javascript"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/bootstrap.svg' %}" alt="bootstrap"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/java.svg' %}" alt="java"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/mysql.svg' %}" alt="mysql"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/postgresql.svg' %}" alt="postgresql"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="sqlite"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/csharp.svg' %}" alt="csharp"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/godot.svg' %}" alt="godot"></div>
-                <div class="slide"><img src="{% static 'images/tecnologias/unity.svg' %}" alt="unity"></div>
+    <!-- Sección: CONOCIMIENTOS -->
+    <section id="conocimientos-timeline" class="py-5 mt-5 pt-5">
+        <h2 class="h2 text-center russo-one-regular py-5 mt-5 mb-5">Conocimientos</h2>
+        <div class="container position-relative py-5">
+            <!-- Línea central -->
+            <div class="timeline-line"></div>
+            <!-- Card 1 -->
+            <div class="row g-4">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <div class="knowledge-card">
+                        <h3>Experiencia 🪙</h3>
+                        <h4>Software Developer - Abaco Developments</h4>
+                        <p>Abril 2024 - Junio 2024</p>
+                        <ul>
+                            <li>Desarrollo de aplicaciones utilizando Python y FlySpeed SQL.</li>
+                            <li>Optimización de bases de datos y análisis de datos.</li>
+                            <li>Desarrollo de soluciones para mejorar la organización y trabajo en equipo.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative d-flex align-items-center">
+                    <div class="timeline-circle"></div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="row g-4">
+                <div class="col-md-6 position-relative d-flex align-items-center">
+                    <div class="timeline-circle"></div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-start">
+                    <div class="knowledge-card">
+                        <h3>Certificaciones 📜</h3>
+                        <h4>The Complete Python Pro Bootcamp</h4>
+                        <p>Angela Yu | Junio 2024 - Septiembre 2024</p>
+                        <h4>Python and Django FullStack Web Developer Bootcamp</h4>
+                        <p>Jose Portilla | Octubre 2024 - Noviembre 2024</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="row g-4">
+                <div class="col-md-6 d-flex justify-content-end">
+                    <div class="knowledge-card">
+                        <h3>Formación 📚</h3>
+                        <h4>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</h4>
+                        <p>IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
+                        <h4>Grado en Arte Dramático</h4>
+                        <p>E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative d-flex align-items-center">
+                    <div class="timeline-circle"></div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="row g-4">
+                <div class="col-md-6 position-relative d-flex align-items-center">
+                    <div class="timeline-circle"></div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-start">
+                    <div class="knowledge-card">
+                        <h3>Aprendiendo 💡</h3>
+                        <div class="tech-grid">
+                            <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="FastAPI">
+                            <img src="{% static 'images/tecnologias/aws.svg' %}" alt="AWS">
+                            <img src="{% static 'images/tecnologias/svelte.svg' %}" alt="Svelte">
+                            <img src="{% static 'images/tecnologias/csharp.svg' %}" alt="C#">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección: Experiencia y Formación en dos columnas -->
-    <section id="info-profesional" class="mt-5">
-        <div class="row">
-            <!-- Columna de Experiencia -->
-            <div class="col-md-6">
-                <h2 class="text-center">Experiencia Laboral</h2>
-                <div class="mt-4">
-                    <h4><strong>Junior Software Developer - Abaco Developments</strong></h4>
-                    <p>Abril 2024 - Junio 2024</p>
-                    <ul>
-                        <li>Desarrollé aplicaciones utilizando Python y FlySpeed SQL.</li>
-                        <li>Colaboré en la optimización de bases de datos y análisis de datos.</li>
-                        <li>Participé en el desarrollo de soluciones para mejorar la organización y trabajo en equipo.</li>
-                    </ul>
-                </div>
-            </div>
 
-            <!-- Columna de Formación -->
-            <div class="col-md-6">
-                <h2 class="text-center">Formación</h2>
-                <div class="mt-4">
-                    <p><strong>Udemy Certificate: Python and Django FullStack Web Developer Bootcamp</strong> - Jose Portilla | Octubre 2024 - Noviembre 2024</p>
-                    <p><strong>Udemy Certificate: The Complete Python Pro Bootcamp</strong> - Angela Yu | Junio 2024 - Agosto 2024</p>
-                    <p><strong>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</strong> - IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
-                    <p><strong>Grado en Arte Dramático</strong> - E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
 
 {% endblock %}
