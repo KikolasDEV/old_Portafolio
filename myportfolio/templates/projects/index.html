@@ -72,13 +72,55 @@
     </section>
 
 
-    <!-- Sección: Proyectos -->
-    <section id="proyectos" class="dark mt-5">
+    <!-- Sección: SOBRE-MÍ -->
+    <section id="sobre-mi" class="py-5 mt-5">
         <div class="container">
-            <h2 class="h2 text-center russo-one-regular mb-5">Proyectos</h2>
+            <div class="row align-items-center">
+                <!-- Columna Izquierda: Imagen -->
+                <div class="col-md-5">
+                    <div class="image-container">
+                        <img src="{% static 'images/Kiko_Sobre_Mi.jpg' %}" alt="Kiko-Sobre-Mi" class="img-fluid shadow-lg">
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Contenido -->
+                <div class="col-md-7">
+                    <h2 class="text-start russo-one-regular text-danger mb-4">Sobre mí</h2>
+                    <p class="baloo-regular" style="font-size: 1.2rem; line-height: 1.8;">
+                        ¡Hola! Mi nombre es José Francisco González Amarillo, aunque todos me llaman Kiko. Soy un desarrollador de software con experiencia en tecnologías como <strong>Python, Django, Flask</strong> y bases de datos relacionales como <strong>MySQL</strong> y <strong>PostgreSQL</strong>.
+                    </p>
+                    <p class="baloo-regular" style="font-size: 1.2rem; line-height: 1.8;">
+                        Mi formación en <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, junto con proyectos prácticos compartidos en mi <a href="https://github.com/KikolasDEV" target="_blank" class="text-decoration-none text-danger"><strong>GitHub</strong></a>, me han permitido aplicar habilidades en entornos reales. Estoy continuamente mejorando mi perfil profesional, participando en <strong>bootcamps</strong> y desarrollando proyectos reales para ampliar mi perspectiva y experiencia.
+                    </p>
+                    <p class="baloo-regular" style="font-size: 1.2rem; line-height: 1.8;">
+                        Soy una persona en constante aprendizaje, motivada por enfrentar nuevos retos y siempre buscando soluciones creativas y eficientes. Me esfuerzo por trabajar en equipo, aportar valor y seguir creciendo tanto personal como profesionalmente.
+                    </p>
+                    <p class="baloo-regular" style="font-size: 1.2rem; line-height: 1.8;">
+                        Estoy abierto a nuevas oportunidades y dispuesto a adaptarme a cualquier entorno laboral, incluso trasladándome si es necesario. Mi enfoque es construir aplicaciones útiles y atractivas que resuelvan problemas del mundo real.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Frase final -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <blockquote class="text-center text-light baloo-regular" style="font-size: 1.4rem; font-style: italic;">
+                        "Somos individuos únicos y auténticos que nos conformamos con respuestas programadas. Bastaría con alterar los parámetros."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sección: Proyectos -->
+    <section id="proyectos" class="dark py-5">
+        <div class="container">
+            <h2 class="h2 text-center russo-one-regular py-5">Proyectos</h2>
 
             <!-- Tarjeta Proyecto 1 -->
-            <article class="postcard">
+            <article class="postcard mt-3">
                 <a class="postcard__img_link" href="#">
                     <img class="postcard__img_left" src="{% static 'images/proyectos/blogangela.png' %}" alt="Blog">
                 </a>
@@ -107,7 +149,7 @@
             </article>
 
             <!-- Tarjeta Proyecto 2 -->
-            <article class="postcard">
+            <article class="postcard mt-5">
                 <a class="postcard__img_link" href="#">
                     <img class="postcard__img_right" src="https://picsum.photos/800/400" alt="Proyecto 2">
                 </a>
@@ -177,7 +219,7 @@
 
             <!-- Card 1 -->
             <div class="row g-4">
-                <div class="col-md-5 d-flex justify-content-end">
+                <div class="col-md-5 left-card">
                     <div class="knowledge-card">
                         <h3>Experiencia 🪙</h3>
                         <h4>Software Developer - Abaco Developments</h4>
@@ -207,7 +249,7 @@
                         <div class="timeline-circle"></div>
                     </div>
                 </div>
-                <div class="col-md-5 d-flex justify-content-start">
+                <div class="col-md-5 right-card">
                     <div class="knowledge-card">
                         <h3>Certificaciones 📜</h3>
                         <h4>
@@ -227,7 +269,7 @@
 
             <!-- Card 3 -->
             <div class="row g-4">
-                <div class="col-md-5 d-flex justify-content-end">
+                <div class="col-md-5 left-card">
                     <div class="knowledge-card">
                         <h3>Formación 📚</h3>
                         <h4>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</h4>
@@ -254,7 +296,7 @@
                         <div class="timeline-circle"></div>
                     </div>
                 </div>
-                <div class="col-md-5 d-flex justify-content-start">
+                <div class="col-md-5 right-card">
                     <div class="knowledge-card">
                         <h3>Aprendiendo 💡</h3>
                         <div class="tech-grid">
