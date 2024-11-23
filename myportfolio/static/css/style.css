@@ -34,7 +34,7 @@ body {
 
 /* -------- Footer -------- */
 footer {
-    background-color: #18151f;
+    background-color: #171717;
     color: #F5EDED;
     padding: 10px 0;
     text-align: center;
@@ -109,6 +109,7 @@ footer .nav-link:hover {
 
 .btn-neon {
     position: relative;
+    display: inline-block;
     padding: 15px 30px;
     font-size: 10px;
     border-width: 0;
@@ -120,7 +121,7 @@ footer .nav-link:hover {
     overflow: hidden;
     cursor: pointer;
     margin: 10px;
-    transition: all 0.25s;
+    transition: color 0.3s ease-in-out;
     margin-right: 50px;
     margin-top: 15px;
 }
@@ -129,9 +130,6 @@ footer .nav-link:hover {
     position: absolute;
     display: block;
     background: linear-gradient(90deg, transparent 30%, var(--btn-red-color));
-    animation-duration: var(--btn-duration);
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 }
 
 .btn-neon span:nth-child(1) {
@@ -139,17 +137,16 @@ footer .nav-link:hover {
     left: -100%;
     width: 100%;
     height: 2px;
-    animation-name: btn-neon-top;
-    animation-delay: 0s; /* Sin retraso */
+    animation: line-top 1.5s linear infinite;
 }
 
 .btn-neon span:nth-child(2) {
     right: 0;
-    top: -100%;
+    top: 0;
     width: 2px;
     height: 100%;
-    animation-name: btn-neon-right;
-    animation-delay: calc(var(--btn-duration) / 4); /* Empieza después de un cuarto del tiempo */
+    animation: line-right 1.5s linear infinite;
+    animation-delay: 0.375s;
 }
 
 .btn-neon span:nth-child(3) {
@@ -157,17 +154,17 @@ footer .nav-link:hover {
     bottom: 0;
     width: 100%;
     height: 2px;
-    animation-name: btn-neon-bottom;
-    animation-delay: calc(var(--btn-duration) / 4 * 2); /* Empieza en la mitad */
+    animation: line-bottom 1.5s linear infinite;
+    animation-delay: 0.75s;
 }
 
 .btn-neon span:nth-child(4) {
-    bottom: -100%;
+    bottom: 0;
     left: 0;
     width: 2px;
     height: 100%;
-    animation-name: btn-neon-left;
-    animation-delay: calc(var(--btn-duration) / 4 * 3); /* Empieza después de tres cuartos */
+    animation: line-left 1.5s linear infinite;
+    animation-delay: 1.125s;
 }
 
 .btn-neon:hover {
@@ -178,38 +175,38 @@ footer .nav-link:hover {
                 0 0 50px var(--btn-red-color);
 }
 
-@keyframes btn-neon-top {
-    from {
+@keyframes line-top {
+    0% {
         left: -100%;
     }
-    to {
+    50%, 100% {
         left: 100%;
     }
 }
 
-@keyframes btn-neon-right {
-    from {
+@keyframes line-right {
+    0% {
         top: -100%;
     }
-    to {
+    50%, 100% {
         top: 100%;
     }
 }
 
-@keyframes btn-neon-bottom {
-    from {
+@keyframes line-bottom {
+    0% {
         right: -100%;
     }
-    to {
+    50%, 100% {
         right: 100%;
     }
 }
 
-@keyframes btn-neon-left {
-    from {
+@keyframes line-left {
+    0% {
         bottom: -100%;
     }
-    to {
+    50%, 100% {
         bottom: 100%;
     }
 }
@@ -249,7 +246,7 @@ footer .nav-link:hover {
 }
 
 .navbar-scrolled {
-    background-color: #18151f;
+    background-color: #171717;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease-in-out;
 }
@@ -404,7 +401,7 @@ footer .nav-link:hover {
 
 #proyectos .postcard {
     display: flex;
-    background: linear-gradient(to right, #0F0F0F, #101012, #1c0101);
+    background: linear-gradient(135deg, #3C3C3C, #1A1A1A, #4A1818);
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -534,41 +531,44 @@ footer .nav-link:hover {
 
 /* -------- Sección CONOCIMIENTOS -------- */
 /* ---- Timeline ---- */
-#conocimientos-timeline {
+.timeline {
     position: relative;
-    background: linear-gradient(to bottom, #1c1c1c, transparent 95%);
-    color: #F5EDED;
-    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .timeline-line {
     position: absolute;
-    top: 0;
-    left: 50%;
     width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, #D72323, transparent);
+    height: calc(100% + 200px);
+    background: #4A4A4A;
     z-index: 1;
-    transform: translateX(-50%);
+}
+
+.row.g-4 {
+    margin-bottom: 100px;
 }
 
 .timeline-circle {
-    width: 16px;
-    height: 16px;
+    position: relative;
+    width: 20px;
+    height: 20px;
     background-color: #D72323;
     border-radius: 50%;
     z-index: 2;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(215, 35, 35, 0.8);
 }
 
 /* ---- Cards ----  */
 .knowledge-card {
-    background: linear-gradient(to bottom, #18151f, #1c1c1c);
+    background: linear-gradient(135deg, #3C3C3C, #1A1A1A, #4A1818);
     font-family: "Baloo 2", cursive;
     font-size: 1.5em;
     border-radius: 15px;
-    border: 1px solid #D72323;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     width: 100%;
@@ -577,17 +577,10 @@ footer .nav-link:hover {
 }
 
 .knowledge-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 6px 25px rgba(215, 35, 35, 0.5);
 }
 
-/* Separación entre la línea y las cards */
-.col-md-6.d-flex.justify-content-end,
-.col-md-6.d-flex.justify-content-start {
-    padding: 0 50px; /* Separación de 50px respecto a la línea */
-}
-
-/* General */
 .knowledge-card h3 {
     font-size: 1.2rem;
     font-weight: bold;
@@ -621,6 +614,12 @@ footer .nav-link:hover {
     font-size: 0.9rem;
     margin-bottom: 5px;
     color: #F5EDED;
+}
+
+.icon-ud {
+    width: 42px;
+    height: 42px;
+    margin-right: 4px;
 }
 
 /* ---------------------- CONTACT.HTML ---------------------- */
