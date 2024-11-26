@@ -257,7 +257,8 @@ footer .nav-link:hover {
     margin: 0 10px;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: #D72323;
     transform: translateY(-2px);
     text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
