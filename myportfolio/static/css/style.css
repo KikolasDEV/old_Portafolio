@@ -81,6 +81,17 @@ footer .nav-link:hover {
     gap: 8px;
 }
 
+@media (min-width: 768px) {
+    footer {
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .footer-info {
+        width: auto;
+    }
+}
+
 /* -------- Buttons -------- */
 :root {
     --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%);
@@ -430,6 +441,17 @@ footer .nav-link:hover {
     gap: 15px;
 }
 
+@media (min-width: 768px) {
+    #presentacion {
+        text-align: left;
+    }
+
+    #presentacion .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+
 /* -------- Sección SOBRE-MI -------- */
 #sobre-mi .row {
     align-items: center;
@@ -482,6 +504,17 @@ footer .nav-link:hover {
     margin-top: 30px;
     font-style: italic;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    #sobre-mi {
+        text-align: left;
+    }
+
+    #sobre-mi .col-md-7 {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* -------- Sección PROYECTOS -------- */
@@ -788,6 +821,12 @@ footer .nav-link:hover {
     display: block;
 }
 
+@media (min-width: 768px) {
+    .project-title {
+        text-align: left;
+    }
+}
+
 /* -------- Sección CONOCIMIENTOS -------- */
 /* ---- Timeline ---- */
 .timeline {
@@ -889,10 +928,10 @@ footer .nav-link:hover {
     transform: translateX(-30px);
 }
 
-@media (max-width: 768px) {
-    .left-card,
-    .right-card {
+@media (min-width: 768px) {
+    .left-card, .right-card {
         transform: none;
+        margin: 0;
     }
 }
 
@@ -946,4 +985,11 @@ footer .nav-link:hover {
 .gmail-contact {
     width: 20px;
     height: 20px;
+}
+
+@media (max-width: 768px) {
+    .btn-contact {
+        width: 100%;
+        font-size: 1rem;
+    }
 }
