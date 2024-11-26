@@ -136,14 +136,14 @@ footer .nav-link:hover {
     top: 0;
     left: -100%;
     width: 100%;
-    height: 2px;
+    height: 3px;
     animation: line-top 1.5s linear infinite;
 }
 
 .btn-neon span:nth-child(2) {
     right: 0;
     top: 0;
-    width: 2px;
+    width: 3px;
     height: 100%;
     animation: line-right 1.5s linear infinite;
     animation-delay: 0.375s;
@@ -153,7 +153,7 @@ footer .nav-link:hover {
     right: -100%;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     animation: line-bottom 1.5s linear infinite;
     animation-delay: 0.75s;
 }
@@ -161,7 +161,7 @@ footer .nav-link:hover {
 .btn-neon span:nth-child(4) {
     bottom: 0;
     left: 0;
-    width: 2px;
+    width: 3px;
     height: 100%;
     animation: line-left 1.5s linear infinite;
     animation-delay: 1.125s;
@@ -446,139 +446,306 @@ footer .nav-link:hover {
 
 /* -------- Sección PROYECTOS -------- */
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap");
+
 #proyectos {
-    font-family: "Baloo 2", cursive;
-    padding: 2rem 0;
-}
-
-#proyectos .postcard {
+    padding: 50px 0;
     display: flex;
-    background: linear-gradient(135deg, #3C3C3C, #1A1A1A, #4A1818);
-    border-radius: 15px;
+    flex-direction: column;
+    gap: 60px;
+}
+
+#proyectos .row {
+    margin-top: 80px;
+}
+
+.proyecto {
+    position: relative;
+    display: inline-block;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-image-wrapper {
+    position: relative;
     overflow: hidden;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-    position: relative;
+    border-radius: 10px;
 }
 
-#proyectos .postcard:hover {
-    box-shadow: 0 6px 20px rgba(215, 35, 35, 0.4);
-}
-
-#proyectos .postcard__img_link {
-    display: contents;
-}
-
-#proyectos .postcard__img_left {
-    max-height: 100%;
-    width: 40%;
-    object-fit: cover;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-}
-
-#proyectos .postcard__img_right {
-    max-height: 100%;
-    width: 40%;
-    object-fit: cover;
-    position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-}
-
-#proyectos .postcard:hover .postcard__img {
+.project-image-wrapper:hover .project-image {
     transform: scale(1.1);
 }
 
-#proyectos .postcard__text {
-    padding: 2rem 3rem;
+.etiqueta {
+    position: absolute;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    color: #F5EDED;
+    flex-direction: column;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    z-index: 2;
+    background-color: inherit;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transform-origin: center;
+    height: auto;
 }
 
-#proyectos .postcard__title {
-    font-size: 1.8rem;
-    color: #D72323;
-    margin-bottom: 0.5rem;
-}
-
-#proyectos .postcard__subtitle {
-    font-size: 0.8rem;
-    color: #cfcfcf;
-    padding-top: 5px;
-    margin-bottom: 0.8rem;
+.etiqueta span {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-#proyectos .postcard__subtitle i {
-    margin-right: 8px;
+.etiqueta .btn-ver-mas {
+    display: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: inherit;
+    border: 1px solid #fff;
+    transition: opacity 0.3s ease-in-out;
 }
 
-#proyectos .postcard__bar {
-    width: 50px;
-    height: 4px;
-    background-color: #D72323;
+.etiqueta.backend {
+    background-color: #8B0000;
+}
+
+.etiqueta.websites {
+    background-color: #004E89;
+    right: 10px;
+    left: auto;
+}
+
+.etiqueta.games {
+    background-color: #006400;
+}
+
+.etiqueta.backend .btn-ver-mas {
+    background-color: #B8860B;
+    border: 2px solid #B8860B;
+}
+
+.etiqueta.websites .btn-ver-mas {
+    background-color: #008B8B;
+    border: 2px solid #008B8B;
+}
+
+.etiqueta.games .btn-ver-mas {
+    background-color: #6B8E23;
+    border: 2px solid #6B8E23;
+}
+
+.etiqueta:hover {
+    transform: scale(1.2);
+    padding: 25px;
+    cursor: pointer;
+}
+
+.etiqueta:hover .btn-ver-mas {
+    display: block;
+}
+
+.project-title {
+    font-size: 2rem;
+    color: #D72323;
     margin-bottom: 1rem;
 }
 
-#proyectos .postcard__preview-txt {
-    overflow: hidden;
-    text-overflow: ellipsis;
+.project-description {
+    font-family: "Baloo 2", cursive;
+    color: #F5EDED;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 540px;
+}
+
+.project2 {
+    padding-left: 225px;
+}
+
+.tech-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-bottom: 16px;
+    margin-right: 5px;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 25px;
     font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-}
-
-#proyectos .postcard__tagbox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
-}
-
-#proyectos .postcard__tagbox a {
-    text-decoration: none;
-}
-
-#proyectos .postcard__tagbox .tag__item {
-    font-size: 0.9rem;
     color: #fff;
-    display: inline-flex;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    padding: 0.4rem 0.8rem;
-    align-items: center;
-    gap: 7px;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease;
+    background-color: transparent;
+    border: 2px solid #D72323;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-#proyectos .postcard__tagbox .tag__item:hover {
+.project-btn i {
+    font-size: 1.2rem;
+}
+
+.project-btn:hover {
     background-color: #D72323;
+    border: 2px solid #fff;
     color: #fff;
 }
 
-#proyectos .postcard__tagbox .tipo-proyecto {
-    margin-left: auto;
-    font-weight: bold;
+.text-light {
+    font-family: "Baloo 2", cursive;
 }
 
-#proyectos .tag__item i {
-    font-size: 0.9rem;
+.btn-neon-project {
+    position: relative;
+    display: inline-block;
+    padding: 20px 80px;
+    margin: 20px;
+    font-size: 1.25rem;
+    border-width: 0;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Para dispositivos mayores a 768px */
-@media screen and (min-width: 768px) {
-    #proyectos .postcard {
-        flex-direction: row;
-    }
+.btn-neon-project span {
+    position: absolute;
+    display: block;
+    background: linear-gradient(90deg, transparent 30%, #fff);
+}
 
-    #proyectos .postcard:nth-child(odd) {
-        flex-direction: row-reverse;
+.btn-neon-project span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    animation: line-top 1.5s linear infinite;
+}
+
+.btn-neon-project span:nth-child(2) {
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    animation: line-right 1.5s linear infinite;
+    animation-delay: 0.375s;
+}
+
+.btn-neon-project span:nth-child(3) {
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    animation: line-bottom 1.5s linear infinite;
+    animation-delay: 0.75s;
+}
+
+.btn-neon-project span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    animation: line-left 1.5s linear infinite;
+    animation-delay: 1.125s;
+}
+
+.btn-neon-project:hover {
+    background: linear-gradient(135deg, #fff, #fff); /* Aparece gradiente al hover */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 10px, 0 0 40px;
+}
+
+.btn-neon-project.backend span {
+    background: linear-gradient(90deg, transparent 30%, #8B0000);
+}
+
+.btn-neon-project.backend:hover {
+    box-shadow: 0 0 10px #8B0000, 0 0 30px #B22222, 0 0 50px #A52A2A;
+}
+
+.btn-neon-project.websites span {
+    background: linear-gradient(90deg, transparent 30%, #004E89);
+}
+
+.btn-neon-project.websites:hover {
+    box-shadow: 0 0 10px #004E89, 0 0 30px #0077BE, 0 0 50px #005F9E;
+}
+
+.btn-neon-project.games span {
+    background: linear-gradient(90deg, transparent 30%, #6B8E23);
+}
+
+.btn-neon-project.games:hover {
+    box-shadow: 0 0 10px #6B8E23, 0 0 30px #556B2F, 0 0 50px #7CFC00;
+}
+
+@keyframes line-top {
+    0% {
+        left: -100%;
     }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+@keyframes line-right {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+@keyframes line-bottom {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+@keyframes line-left {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+.btn-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 /* -------- Sección CONOCIMIENTOS -------- */
@@ -691,7 +858,8 @@ footer .nav-link:hover {
 
 /* ---------------------- CONTACT.HTML ---------------------- */
 .contact-descripcion {
-    font-size: 1.75rem;
+    font-family: "Baloo 2", cursive;
+    font-size: 1.5rem;
 }
 
 .form-group label {

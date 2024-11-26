@@ -4,7 +4,7 @@
 {% block body_block %}
 
 <div class="container contact-page pt-5 mt-5">
-    <h1 class="text-center russo-one-regular">Contacto</h1>
+    <h1 class="text-center russo-one-regular mb-4" style="color: #D72323;">Contacto</h1>
 
     {% if messages %}
         <div class="alert alert-success" role="alert">
@@ -22,27 +22,27 @@
     </div>
 
     <form method="POST">
-    {% csrf_token %}
-        <div class="row justify-content-center">
-            <!-- Sección izquierda con los campos del formulario -->
-            <div class="col-md-6">
-                    <div class="mb-3">
-                        {% bootstrap_field form.nombre %}
-                    </div>
-                    <div class="mb-3">
-                        {% bootstrap_field form.email %}
-                    </div>
-                    <div class="mb-3">
-                        {% bootstrap_field form.asunto %}
-                    </div>
-                    <div class="mb-3">
-                        <p>¡Cualquier feedback (respetando SIEMPRE) es bienvenido!✨<br>
-                        Ante todo, muchísimas gracias por tu apoyo e interés. ¡Nos vemos!💻</p>
-                    </div>
+        {% csrf_token %}
+        <!-- Fila 1: Nombre y Correo Electrónico -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                {% bootstrap_field form.nombre %}
             </div>
+            <div class="col-md-6 mb-3">
+                {% bootstrap_field form.email %}
+            </div>
+        </div>
 
-            <!-- Sección derecha con el editor de mensaje -->
-            <div class="col-md-6">
+        <!-- Fila 2: Asunto -->
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                {% bootstrap_field form.asunto %}
+            </div>
+        </div>
+
+        <!-- Fila 3: Mensaje -->
+        <div class="row">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label for="editor-container">Mensaje</label>
                     <div id="editor-container">
@@ -78,7 +78,8 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <!-- Fila 4: Botón Enviar -->
+        <div class="row">
             <div class="col-md-12 text-center">
                 <button type="submit" class="btn btn-danger mt-4 btn-contact russo-one-regular">Enviar</button>
             </div>

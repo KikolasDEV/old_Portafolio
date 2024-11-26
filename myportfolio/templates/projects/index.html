@@ -101,7 +101,7 @@
             </div>
 
             <!-- Frase final -->
-            <div class="row mt-5">
+            <div class="row py-5">
                 <div class="col-12">
                     <blockquote class="text-center text-light">
                         "Somos individuos únicos y auténticos que nos conformamos con respuestas programadas. Bastaría con alterar los parámetros."
@@ -112,101 +112,118 @@
     </section>
 
 
-
-    <!-- Sección: Proyectos -->
-    <section id="proyectos" class="dark py-5">
+    <!-- Sección: PROYECTOS -->
+    <section id="proyectos" class="py-5 mt-5">
         <div class="container">
-            <h2 class="h2 text-center russo-one-regular py-5">Proyectos</h2>
+            <h2 class="text-center russo-one-regular py-3 mt-5">Proyectos Principales</h2>
 
-            <!-- Tarjeta Proyecto 1 -->
-            <article class="postcard mt-3">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img_left" src="{% static 'images/proyectos/blogangela.png' %}" alt="Blog">
-                </a>
-                <div class="postcard__text">
-                    <h1 class="postcard__title">Blog Capstone Project</h1>
-                    <div class="postcard__subtitle">
-                        <i class="fas fa-calendar-alt"></i> Agosto, 2024
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <p class="postcard__preview-txt">
-                        Un proyecto completo de desarrollo de un blog usando Python, Flask, RESTful Routing y SQLAlchemy. Implementación de autenticación, publicación, edición y borrado de entradas (añadiendo permisos específicos de admin y usuarios) y gestión de bases de datos.                     </p>
-                    <div class="postcard__tagbox d-flex justify-content-between">
-                        <div class="d-flex gap-3">
-                            <a href="#" class="tag__item">
-                                <i class="fas fa-link"></i> Live Preview
-                            </a>
-                            <a href="#" class="tag__item">
-                                <i class="fab fa-github"></i> GitHub Code
-                            </a>
-                        </div>
-                        <div class="tag__item tipo-proyecto">
-                            <i class="fas fa-tag"></i> Backend
-                        </div>
+            <!-- Proyecto 1 -->
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-md-5 proyecto">
+                    <!--<div class="etiqueta backend">
+                        <span><i class="fas fa-tag me-2"></i> Backend</span>
+                        <a href="#" class="btn-ver-mas">Ver más</a>
+                    </div>-->
+                    <div class="project-image-wrapper">
+                        <img src="{% static 'images/proyectos/pwmanager.png' %}" alt="Password Manager" class="project-image">
                     </div>
                 </div>
-            </article>
-
-            <!-- Tarjeta Proyecto 2 -->
-            <article class="postcard mt-5">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img_right" src="https://picsum.photos/800/400" alt="Proyecto 2">
-                </a>
-                <div class="postcard__text">
-                    <h1 class="postcard__title">Proyecto 2</h1>
-                    <div class="postcard__subtitle">
-                        <i class="fas fa-calendar-alt"></i> Junio, 2023
+                <div class="col-md-7">
+                    <div class="d-flex align-items-center mb-3">
+                        <h3 class="project-title russo-one-regular">Password Manager</h3>
+                        <div class="d-flex gap-2 ms-3">
+                            <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+                        </div>
                     </div>
-                    <div class="postcard__bar"></div>
-                    <p class="postcard__preview-txt">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores commodi corporis eius eligendi enim est eum eveniet impedit laboriosam, magni, nemo nostrum quae quasi quis tempora ullam vero.
+                    <p class="project-description">
+                        Aplicación de gestión de contraseñas desarrollada en Python junto con su GUI Tkinter. Permite almacenar y gestionar de forma segura múltiples contraseñas en un archivo JSON, ofreciendo una interfaz intuitiva para el usuario.
                     </p>
-                    <div class="postcard__tagbox d-flex justify-content-between">
-                        <div class="d-flex gap-3">
-                            <a href="#" class="tag__item">
-                                <i class="fas fa-link"></i> Live Preview
-                            </a>
-                            <a href="#" class="tag__item">
-                                <i class="fab fa-github"></i> GitHub Code
-                            </a>
-                        </div>
-                        <!-- Derecha: Backend/Website/Game -->
-                        <div class="tag__item tipo-proyecto">
-                            <i class="fas fa-tag"></i> Website
-                        </div>
+                    <div class="d-flex align-items-center gap-3 mt-5">
+                        <a href="https://github.com/KikolasDEV/PasswordManager" class="btn project-btn russo-one-regular">
+                            <i class="fab fa-github me-2"></i> GitHub Code
+                        </a>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <!-- Tarjeta Proyecto 3 -->
-            <article class="postcard">
-                <a class="postcard__img_link" href="#">
-                    <img class="postcard__img_left" src="https://picsum.photos/800/400" alt="Proyecto 3">
-                </a>
-                <div class="postcard__text">
-                    <h1 class="postcard__title">Proyecto 3</h1>
-                    <div class="postcard__subtitle">
-                        <i class="fas fa-calendar-alt"></i> Diciembre, 2023
-                    </div>
-                    <div class="postcard__bar"></div>
-                    <p class="postcard__preview-txt">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores commodi corporis eius eligendi enim est eum eveniet impedit laboriosam, magni, nemo nostrum quae quasi quis tempora ullam vero.
-                    </p>
-                    <div class="postcard__tagbox d-flex justify-content-between">
-                        <div class="d-flex gap-3">
-                            <a href="#" class="tag__item">
-                                <i class="fas fa-link"></i> Live Preview
-                            </a>
-                            <a href="#" class="tag__item">
-                                <i class="fab fa-github"></i> GitHub Code
-                            </a>
-                        </div>
-                        <div class="tag__item tipo-proyecto">
-                            <i class="fas fa-tag"></i> Game
-                        </div>
+            <!-- Proyecto 2 -->
+            <div class="row align-items-center py-5">
+                <div class="col-md-5 proyecto">
+                    <!--<div class="etiqueta websites">
+                        <span><i class="fas fa-tag me-2"></i> Websites</span>
+                        <a href="#" class="btn-ver-mas">Ver más</a>
+                    </div>-->
+                    <div class="project-image-wrapper">
+                        <img src="{% static 'images/proyectos/personalBlog.png' %}" alt="Personal Blog" class="project-image">
                     </div>
                 </div>
-            </article>
+                <div class="col-md-7 project2">
+                    <div class="d-flex align-items-center mb-3">
+                        <h3 class="project-title russo-one-regular">Personal Blog</h3>
+                        <div class="d-flex gap-2 ms-3">
+                            <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+                            <img src="{% static 'images/tecnologias/flask.svg' %}" alt="Flask" class="tech-icon">
+                            <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="SQLite" class="tech-icon">
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Desarrollo de un testing-blog usando Python, Flask y RESTful Routing. Incluye una gestión de bases de datos gracias a la implementación de autenticación, publicación, edición y borrado de entradas (añadiendo permisos específicos de admin y usuarios).
+                    </p>
+                    <div class="d-flex align-items-center gap-3 mt-5">
+                        <a href="https://github.com/KikolasDEV/blog-capstone-project" class="btn project-btn russo-one-regular">
+                            <i class="fab fa-github me-2"></i> GitHub Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="row align-items-center py-5 flex-row-reverse">
+                <div class="col-md-5 proyecto">
+                    <!--<div class="etiqueta games">
+                        <span><i class="fas fa-tag me-2"></i> Games</span>
+                        <a href="#" class="btn-ver-mas">Ver más</a>
+                    </div>-->
+                    <div class="project-image-wrapper">
+                        <img src="{% static 'images/proyectos/snake.png' %}" alt="Snake Game" class="project-image">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="d-flex align-items-center mb-3">
+                        <h3 class="project-title russo-one-regular">Snake Retro</h3>
+                        <div class="d-flex gap-2 ms-3">
+                            <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        El clásico juego retro Snake utilizando Python con la GUI Turtle e implementado mediante OOP. Además cuenta con un archivo y una pequeña BBDD indicándote tu máxima puntuación.
+                    </p>
+                    <div class="d-flex align-items-center gap-3 mt-5">
+                        <a href="https://github.com/KikolasDEV/snake-retro" class="btn project-btn russo-one-regular">
+                            <i class="fab fa-github me-2"></i> GitHub Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="text-center mt-5">
+                <h3 class="text-light">¿Te interesa ver más?</h3>
+                <div class="d-flex justify-content-center gap-5 mt-5">
+                    <button class="btn-neon-project backend russo-one-regular">
+                        <span></span><span></span><span></span><span></span>
+                        <a href="{% url 'backend_projects' %}" class="btn-link">Backend</a>
+                    </button>
+                    <button class="btn-neon-project websites russo-one-regular">
+                        <span></span><span></span><span></span><span></span>
+                        <a href="{% url 'websites_projects' %}" class="btn-link">Websites</a>
+                    </button>
+                    <button class="btn-neon-project games russo-one-regular">
+                        <span></span><span></span><span></span><span></span>
+                        <a href="{% url 'games_projects' %}" class="btn-link">Games</a>
+                    </button>
+                </div>
+            </div>-->
+
         </div>
     </section>
 
@@ -299,10 +316,10 @@
                     <div class="knowledge-card">
                         <h3>Aprendiendo 💡</h3>
                         <div class="tech-grid">
-                            <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="FastAPI">
-                            <img src="{% static 'images/tecnologias/aws.svg' %}" alt="AWS">
-                            <img src="{% static 'images/tecnologias/svelte.svg' %}" alt="Svelte">
                             <img src="{% static 'images/tecnologias/csharp.svg' %}" alt="C#">
+                            <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="FastAPI">
+                            <img src="{% static 'images/tecnologias/svelte.svg' %}" alt="Svelte">
+                            <img src="{% static 'images/tecnologias/aws.svg' %}" alt="AWS">
                         </div>
                     </div>
                 </div>
