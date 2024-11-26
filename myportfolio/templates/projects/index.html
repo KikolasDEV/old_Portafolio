@@ -1,4 +1,5 @@
 {% extends "projects/base.html" %}
+{% load django_bootstrap5 %}
 {% load static %}
 {% block body_block %}
 
@@ -324,6 +325,99 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <!-- Sección: CONTACTO -->
+    <section id="contacto" class="py-5">
+        <div class="container contact-page py-5">
+            <h1 class="text-center russo-one-regular mb-4">Contacto</h1>
+
+            {% if messages %}
+                <div class="alert alert-success" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12">
+                    <h2 class="lead text-center contact-descripcion">
+                        Rellena este formulario o escribe a mi correo
+                        <strong>
+                            <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="gmail-contact mb-1 ms-1">
+                            kikoamarillo94@gmail.com
+                        </strong>
+                    </h2>
+                </div>
+            </div>
+
+            <form method="POST">
+                {% csrf_token %}
+                <!-- Fila 1: Nombre y Correo Electrónico -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {% bootstrap_field form.nombre %}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {% bootstrap_field form.email %}
+                    </div>
+                </div>
+
+                <!-- Fila 2: Asunto -->
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        {% bootstrap_field form.asunto %}
+                    </div>
+                </div>
+
+                <!-- Fila 3: Mensaje -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="editor-container" class="mb-2">Mensaje</label>
+                            <div id="editor-container">
+                                <span class="ql-formats">
+                                    <select class="ql-font"></select>
+                                    <select class="ql-size"></select>
+                                </span>
+                                <span class="ql-formats mb-1">
+                                    <select class="ql-align"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-link"></button>
+                                    <button class="ql-image"></button>
+                                    <button class="ql-video"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-list" value="ordered"></button>
+                                    <button class="ql-list" value="bullet"></button>
+                                </span>
+                                <span class="ql-formats me-2">
+                                    <button class="ql-clean"></button>
+                                </span>
+                            </div>
+                            <div id="editor" style="height: 300px; background-color: white;"></div>
+                            <!-- Hidden textarea to hold the content from Quill -->
+                            <textarea name="mensaje" id="mensaje" style="display:none;" placeholder="Escribe tu mensaje..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila 4: Botón Enviar -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-danger mt-4 btn-contact russo-one-regular mt-4">Enviar</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
 

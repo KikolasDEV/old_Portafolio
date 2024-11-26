@@ -896,27 +896,44 @@ footer .nav-link:hover {
 }
 
 /* ---------------------- CONTACT.HTML ---------------------- */
-.contact-descripcion {
+#contacto {
+    background-color: #1A1A1A;
+    color: #F5EDED;
+    border-radius: 5%;
     font-family: "Baloo 2", cursive;
     font-size: 1.5rem;
+    margin-top: 80px;
 }
 
-.form-group label {
-    margin-bottom: 0.5rem;
-    display: block;
+.contact-page {
+    max-width: 750px;
+    margin: 0 auto;
 }
 
-.form-control {
-    font-size: 1.5rem;
-    padding: 15px;
-    height: 45px;
+.contact-descripcion {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+#contacto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #D72323;
 }
 
 .btn-contact {
-    font-size: 2rem;
-    padding: 15px 40px;
+    font-size: 1.5rem;
     width: 300px;
     height: auto;
+}
+
+#editor .ql-editor::before {
+    font-family: "Baloo 2", cursive;
+    font-size: 0.9rem;
+    color: #999;
+    position: absolute;
 }
 
 #editor .ql-editor {
