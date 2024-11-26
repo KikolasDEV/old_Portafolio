@@ -212,42 +212,81 @@ footer .nav-link:hover {
 }
 
 /* ---------------------- NAVBAR ---------------------- */
+.navbar {
+    background-color: rgba(23, 23, 23, 0.9);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 20px;
+    margin: 5px auto;
+    width: 90%;
+    max-width: 1350px;
+    padding: 10px 20px;
+}
+
+.navbar-scrolled {
+    background-color: rgba(23, 23, 23, 1);
+    transform: translateY(0);
+}
+
 .logotype {
     font-size: 1.5rem;
     color: #F5EDED;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logotype:hover {
+    color: #D72323;
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
 }
 
 .logo-icon {
     width: 48px;
     height: 48px;
-    vertical-align: middle;
 }
 
 .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     color: #F5EDED;
-    transition: .5s, color .10s;
-    -webkit-transition: .5s, color .10s;
-    -moz-transition: .5s, color .10s;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin: 0 10px;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover {
     color: #D72323;
-    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-    transform: translateY(-0.25em);
+    transform: translateY(-2px);
+    text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
 }
 
-.navbar-top {
+.navbar-toggler {
+    border: none;
     background-color: transparent;
-    box-shadow: none;
-    transition: background-color 0.3s ease-in-out;
 }
 
-.navbar-scrolled {
-    background-color: #171717;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F5EDED' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28245,237,237,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.5));
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none !important;
+    }
 }
 
 /* ---------------------- INDEX ---------------------- */
@@ -613,7 +652,7 @@ footer .nav-link:hover {
     color: #fff;
 }
 
-.text-light {
+.mas-projects {
     font-family: "Baloo 2", cursive;
 }
 
