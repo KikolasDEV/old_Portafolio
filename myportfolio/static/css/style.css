@@ -1,9 +1,7 @@
-.markazi-text {
-  font-family: "Markazi Text", serif;
-  font-optical-sizing: auto;
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
 }
 
 .russo-one-regular {
@@ -64,7 +62,7 @@ footer .nav-link:hover {
 
 .footer-info .footer-icon + span {
     vertical-align: middle;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .footer-info a {
@@ -441,14 +439,63 @@ footer .nav-link:hover {
     gap: 15px;
 }
 
-@media (min-width: 768px) {
-    #presentacion {
-        text-align: left;
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
     }
 
-    #presentacion .profile-image {
-        width: 200px;
-        height: 200px;
+    .nombre-completo {
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .index-descripcion {
+        font-size: 1.4rem;
+        color: #D72323;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .email {
+        text-align: center;
+        margin-top: 5px;
+        font-size: 1rem;
+    }
+
+    .btn-neon {
+        margin-top: 15px;
+        padding: 10px 20px;
+    }
+
+    .technologies {
+        margin-top: 25px;
+        padding: 0 10px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        gap: 15px;
+    }
+
+    .tech-grid img {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+
+    .btn-neon {
+        margin-top: 25px;
     }
 }
 
@@ -486,7 +533,6 @@ footer .nav-link:hover {
 }
 
 #sobre-mi p {
-    font-family: "Baloo 2", cursive;
     color: #F5EDED;
     font-size: 1.05rem;
     line-height: 1.6;
@@ -640,7 +686,6 @@ footer .nav-link:hover {
 }
 
 .project-description {
-    font-family: "Baloo 2", cursive;
     color: #F5EDED;
     font-size: 1.2rem;
     line-height: 1.8;
@@ -684,10 +729,6 @@ footer .nav-link:hover {
     background-color: #D72323;
     border: 2px solid #fff;
     color: #fff;
-}
-
-.mas-projects {
-    font-family: "Baloo 2", cursive;
 }
 
 .btn-neon-project {
@@ -864,7 +905,6 @@ footer .nav-link:hover {
 /* ---- Cards ----  */
 .knowledge-card {
     background: linear-gradient(135deg, #3C3C3C, #1A1A1A, #4A1818);
-    font-family: "Baloo 2", cursive;
     font-size: 1.5em;
     border-radius: 15px;
     padding: 20px;
@@ -940,7 +980,6 @@ footer .nav-link:hover {
     background-color: #1A1A1A;
     color: #F5EDED;
     border-radius: 5%;
-    font-family: "Baloo 2", cursive;
     font-size: 1.5rem;
     margin-top: 80px;
 }
@@ -970,7 +1009,7 @@ footer .nav-link:hover {
 }
 
 #editor .ql-editor::before {
-    font-family: "Baloo 2", cursive;
+    font-family: "Roboto", cursive;
     font-size: 0.9rem;
     color: #999;
     position: absolute;
