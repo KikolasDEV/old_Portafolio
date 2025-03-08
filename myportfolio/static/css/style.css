@@ -415,23 +415,26 @@ footer .nav-link:hover {
 }
 
 .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    justify-content: center;
+    flex-wrap: nowrap;       /* Mantiene las imágenes en una única fila */
+    gap: 20px;               /* Espacio entre imágenes */
+    overflow-x: visible;     /* Permite que las imágenes ampliadas se muestren completamente */
+    padding: 0 10px;
 }
 
 .tech-grid img {
-    width: 60px;
-    height: 60px;
+    width: 60px;             
+    height: 60px;            
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .tech-grid img:hover {
     transform: scale(1.1);
+    z-index: 10;             /* Asegura que la imagen en hover se superponga a las demás */
 }
 
 .icons-wrapper {
@@ -966,6 +969,11 @@ footer .nav-link:hover {
 
 .right-card {
     transform: translateX(-30px);
+}
+
+.right-card .tech-grid {
+    justify-content: flex-start; /* Alinea a la izquierda */
+    gap: 60px; /* Aumenta la separación entre imágenes */
 }
 
 @media (min-width: 768px) {
