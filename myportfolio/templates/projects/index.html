@@ -11,14 +11,16 @@
             <div class="row align-items-center">
                 <!-- Columna Izquierda -->
                 <div class="col-12 col-md-4 text-start px-5 py-5">
-                    <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3">
+                    <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3 mx-5">
                     <div class="ubicacion-container d-flex align-items-center justify-content-center">
                         <div class="ubicacion">
                             <img src="{% static 'images/logos/ubicacion.png' %}" alt="Ubicación" class="icon me-2">
                             <span>Jerez de la Frontera, España</span>
                         </div>
                     </div>
-                    <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}" class="btn btn-descargar mt-3" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
+                    <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}"
+                       class="btn hero-btn hero-btn-outline mt-3 mx-5 px-5 btn-descargar"
+                       download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
                         Descargar CV
                     </a>
                 </div>
@@ -43,25 +45,26 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-3">
-                         <button class="btn btn-neon">
-                             <span></span>
-                             <span></span>
-                             <span></span>
-                             <span></span>
-                             Disponible para trabajar
+                        <button class="btn hero-btn hero-btn-solid">
+                            <span class="hero-line hero-line-top"></span>
+                            <span class="hero-line hero-line-right"></span>
+                            <span class="hero-line hero-line-bottom"></span>
+                            <span class="hero-line hero-line-left"></span>
+                            Disponible para trabajar
                         </button>
                     </div>
                 </div>
             </div>
             <div class="technologies mt-5 pt-5 mb-5">
                 <div class="tech-grid">
+                    <img src="{% static 'images/tecnologias/java.svg' %}" alt="java">
+                    <img src="{% static 'images/tecnologias/spring.svg' %}" alt="spring">
                     <img src="{% static 'images/tecnologias/python.svg' %}" alt="python">
                     <img src="{% static 'images/tecnologias/flask.svg' %}" alt="flask">
                     <img src="{% static 'images/tecnologias/django.svg' %}" alt="django">
-                    <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="FastAPI">
+                    <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="fastapi">
                     <img src="{% static 'images/tecnologias/html.svg' %}" alt="html">
                     <img src="{% static 'images/tecnologias/css.svg' %}" alt="css">
-                    <img src="{% static 'images/tecnologias/tailwindcss.svg' %}" alt="tailwindcss">
                     <img src="{% static 'images/tecnologias/javascript.svg' %}" alt="javascript">
                     <img src="{% static 'images/tecnologias/react.svg' %}" alt="react">
                     <img src="{% static 'images/tecnologias/mongodb.svg' %}" alt="mongodb">
@@ -71,12 +74,12 @@
                     <img src="{% static 'images/tecnologias/git.svg' %}" alt="git">
                     <img src="{% static 'images/tecnologias/github.svg' %}" alt="github">
                     <img src="{% static 'images/tecnologias/aws.svg' %}" alt="AWS">
+                    <img src="{% static 'images/tecnologias/docker.svg' %}" alt="Docker">
                 </div>
             </div>
         </div>
     </section>
-  
-  
+
     <!-- Sección: SOBRE-MÍ -->
     <section id="sobre-mi" class="py-5 mt-5">
         <div class="container">
@@ -88,19 +91,33 @@
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Contenido -->
+                 <!-- Columna Derecha: Contenido -->
                 <div class="col-md-7 roboto-regular">
-                    <h2 class="russo-one-regular text-danger">Sobre mí</h2>
+                    <h2 class="russo-one-regular sobre-mi-title">Sobre mí</h2>
                     <p>
-                        ¡Muy buenas! Presentándose un desarrollador de software con experiencia principalmente en <strong>Python</strong> y sus frameworks <strong>Flask, Django y FastAPI.</strong>
-                        Reconozco que, en principio, mi intención era ser puro backend developer, pero poco a poco me voy familiarizando y cada vez cogiéndole más el gusto a la programación frontend, especialmente con <strong>React</strong>, de ahí que quiera ser <strong>FullStack</strong>.
+                        ¡Muy buenas! Soy <strong>desarrollador de software</strong> con experiencia principalmente en
+                        <strong>Java</strong> y <strong>Python</strong>, trabajando con frameworks como
+                        <strong>Spring</strong>, <strong>Django</strong>, <strong>Flask</strong> y
+                        <strong>FastAPI</strong>. Empecé muy centrado en el <strong>backend</strong>, pero poco a poco
+                        he ido disfrutando cada vez más del <strong>frontend</strong>, creando interfaces modernas con
+                        <strong>React</strong> y <strong>Angular</strong>, con la idea clara de
+                        crecer como <strong>FullStack Developer</strong>.
                     </p>
                     <p>
-                        Actualmente mi enfoque está en mejorar, mejorar y, una vez más, <strong>mejorar</strong> como desarrollador. Programo proyectos continuamente, a la vez que haciendo retos/challenges para así consolidar y demostrar(me) lo que soy capaz de hacer,
-                        todo esto mientras sigo ampliando conocimientos sobre más tecnologías para aumentar mi <strong>experiencia laboral</strong> y mejorar mi perspectiva y mi experiencia.
+                        Mi camino viene de compaginar <strong>formación reglada</strong> (C.F.G.S. en DAM y DAW) con
+                        <strong>bootcamps</strong> y muchos proyectos personales. He trabajado en entornos reales,
+                        desarrollando aplicaciones web, APIs REST y sistemas internos, usando bases de datos SQL como
+                        <strong>MySQL</strong>, <strong>PostgreSQL</strong>, y NoSQL como <strong>MongoDB</strong>,
+                        además de contenedores <strong>Docker</strong> y control de versiones
+                        con <strong>Git</strong> y <strong>GitHub</strong>.
                     </p>
                     <p>
-                        En definitiva, todo esto que os cuento es <strong>motivación</strong> por enfrentar nuevos retos y buscar soluciones creativas y eficientes. Sé trabajar en equipo, creo poder aportar valor y las demás <strong>soft skills</strong> necesarias espero demostrároslo en nuestro primer encuentro.
+                        Soy una persona <strong>curiosa</strong> y <strong>muy orientada a aprender</strong>: siempre
+                        tengo algún reto, mini–proyecto o idea nueva en marcha. Disfruto trabajando en equipo,
+                        compartiendo conocimiento y buscando soluciones <strong>prácticas y mantenibles</strong>.
+                        Tengo <strong>disponibilidad inmediata</strong> y flexibilidad para <strong>reubicarme</strong>
+                        si el proyecto lo requiere. En resumen, mi objetivo es seguir creciendo combinando parte técnica
+                        y <strong>soft skills</strong> que espero demostraros en nuestros encuentros.
                     </p>
                 </div>
             </div>
@@ -116,122 +133,165 @@
         </div>
     </section>
 
-
     <!-- Sección: PROYECTOS -->
     <section id="proyectos" class="py-5 mt-5 roboto-regular">
         <div class="container">
-            <h2 class="text-center russo-one-regular py-3 mt-5">Proyectos Principales</h2>
+            <h2 class="text-center russo-one-regular py-3 mt-5">Proyectos</h2>
 
-            <!-- Proyecto 1 -->
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-md-5 proyecto">
-                    <!--<div class="etiqueta backend">
-                        <span><i class="fas fa-tag me-2"></i> Backend</span>
-                        <a href="#" class="btn-ver-mas">Ver más</a>
-                    </div>-->
-                    <div class="project-image-wrapper">
-                        <img src="{% static 'images/proyectos/pwmanager.png' %}" alt="Password Manager" class="project-image">
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="d-flex align-items-center mb-3">
-                        <h3 class="project-title russo-one-regular">Password Manager</h3>
-                        <div class="d-flex gap-2 ms-3">
-                            <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+            <!-- Filtros Java / Python -->
+            <div class="project-filters text-center mt-4 mb-4">
+                <button type="button" class="project-filter-btn" data-lang="java">
+                    Proyectos Java
+                </button>
+                <button type="button" class="project-filter-btn" data-lang="python">
+                    Proyectos Python
+                </button>
+            </div>
+
+            <!-- Contenedor proyectos Java -->
+            <div id="java-projects" class="projects-list d-none">
+
+                <!-- Proyecto Java 1 -->
+                <div class="row align-items-start flex-row-reverse project-row">
+                    <div class="col-md-5 proyecto">
+                        <div class="project-image-wrapper">
+                            <img src="{% static 'images/proyectos/recetas.png' %}" alt="Recetas" class="project-image">
                         </div>
                     </div>
-                    <p class="project-description">
-                        Aplicación de gestión de contraseñas desarrollada en Python junto con su GUI Tkinter. Permite almacenar y gestionar de forma segura múltiples contraseñas en un archivo JSON, ofreciendo una interfaz intuitiva para el usuario.
-                    </p>
-                    <div class="d-flex align-items-center gap-3 mt-5">
-                        <a href="https://github.com/KikolasDEV/PasswordManager" class="btn project-btn russo-one-regular">
-                            <i class="fab fa-github me-2"></i> GitHub Code
-                        </a>
+                    <div class="col-md-7">
+                        <div class="d-flex align-items-center mb-3">
+                            <h3 class="project-title russo-one-regular">Recetas</h3>
+                            <div class="d-flex gap-2 ms-3">
+                                <img src="{% static 'images/tecnologias/java.svg' %}" alt="Java" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/spring.svg' %}" alt="Spring" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="SQLite" class="tech-icon">
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Aplicación sencilla de gestión de recetas culinarias desarrollada con
+                            <strong>Java</strong>, <strong>Spring</strong> y <strong>SQLite</strong>.  
+                            Permite crear y consultar recetas, trabajando el flujo completo de
+                            una pequeña aplicación CRUD: controladores, servicios, repositorios
+                            y persistencia en base de datos. Es un proyecto orientado a practicar
+                            arquitectura por capas, validación de datos y organización del código.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-5">
+                            <a href="https://github.com/KikolasDEV/recetas-prueba-tecnica"
+                               class="btn project-btn russo-one-regular" target="_blank">
+                                <i class="fab fa-github me-2"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto Java 2 -->
+                <div class="row align-items-start py-5 project-row">
+                    <div class="col-md-5 proyecto">
+                        <div class="project-image-wrapper">
+                            <img src="{% static 'images/proyectos/coleccion.png' %}" alt="Coleccion" class="project-image">
+                        </div>
+                    </div>
+                    <div class="col-md-7 project2">
+                        <div class="d-flex align-items-center mb-3">
+                            <h3 class="project-title russo-one-regular">Java Collection</h3>
+                            <div class="d-flex gap-2 ms-3">
+                                <img src="{% static 'images/tecnologias/java.svg' %}" alt="Java" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/spring.svg' %}" alt="Spring" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/html.svg' %}" alt="HTML" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/css.svg' %}" alt="CSS" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/javascript.svg' %}" alt="javascript" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="SQLite" class="tech-icon">
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Repositorio que agrupa distintos proyectos desarrollados durante la
+                            formación en IPARTEK: ejercicios de <strong>Java</strong> y
+                            <strong>Spring</strong>, pequeñas aplicaciones web con
+                            <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>,
+                            y ejemplos de integración con <strong>SQLite</strong>.  
+                            El objetivo es consolidar conceptos de colecciones, MVC, manejo de
+                            formularios, plantillas y exposición de endpoints REST.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-5">
+                            <a href="https://github.com/KikolasDEV/java-2901"
+                               class="btn project-btn russo-one-regular" target="_blank">
+                                <i class="fab fa-github me-2"></i> GitHub Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 2 -->
-            <div class="row align-items-center py-5">
-                <div class="col-md-5 proyecto">
-                    <!--<div class="etiqueta websites">
-                        <span><i class="fas fa-tag me-2"></i> Websites</span>
-                        <a href="#" class="btn-ver-mas">Ver más</a>
-                    </div>-->
-                    <div class="project-image-wrapper">
-                        <img src="{% static 'images/proyectos/personalBlog.png' %}" alt="Personal Blog" class="project-image">
-                    </div>
-                </div>
-                <div class="col-md-7 project2">
-                    <div class="d-flex align-items-center mb-3">
-                        <h3 class="project-title russo-one-regular">Personal Blog</h3>
-                        <div class="d-flex gap-2 ms-3">
-                            <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
-                            <img src="{% static 'images/tecnologias/flask.svg' %}" alt="Flask" class="tech-icon">
-                            <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="SQLite" class="tech-icon">
+            <!-- Contenedor proyectos Python -->
+            <div id="python-projects" class="projects-list d-none">
+
+                <!-- Proyecto Python 1 -->
+                <div class="row align-items-start flex-row-reverse project-row">
+                    <div class="col-md-5 proyecto">
+                        <div class="project-image-wrapper">
+                            <img src="{% static 'images/proyectos/pwmanager.png' %}" alt="Password Manager" class="project-image">
                         </div>
                     </div>
-                    <p class="project-description">
-                        Desarrollo de un testing-blog usando Python, Flask y RESTful Routing. Incluye una gestión de bases de datos gracias a la implementación de autenticación, publicación, edición y borrado de entradas (añadiendo permisos específicos de admin y usuarios).
-                    </p>
-                    <div class="d-flex align-items-center gap-3 mt-5">
-                        <a href="https://github.com/KikolasDEV/blog-capstone-project" class="btn project-btn russo-one-regular">
-                            <i class="fab fa-github me-2"></i> GitHub Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto 3 -->
-            <div class="row align-items-center py-5 flex-row-reverse">
-                <div class="col-md-5 proyecto">
-                    <!--<div class="etiqueta games">
-                        <span><i class="fas fa-tag me-2"></i> Games</span>
-                        <a href="#" class="btn-ver-mas">Ver más</a>
-                    </div>-->
-                    <div class="project-image-wrapper">
-                        <img src="{% static 'images/proyectos/snake.png' %}" alt="Snake Game" class="project-image">
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="d-flex align-items-center mb-3">
-                        <h3 class="project-title russo-one-regular">Snake Retro</h3>
-                        <div class="d-flex gap-2 ms-3">
-                            <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+                    <div class="col-md-7">
+                        <div class="d-flex align-items-center mb-3">
+                            <h3 class="project-title russo-one-regular">Password Manager</h3>
+                            <div class="d-flex gap-2 ms-3">
+                                <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Aplicación de gestión de contraseñas desarrollada en <strong>Python</strong>
+                            junto con su GUI <strong>Tkinter</strong>. Permite almacenar y gestionar
+                            de forma segura múltiples contraseñas en un archivo <strong>JSON</strong>,
+                            ofreciendo una interfaz intuitiva para el usuario y trabajando conceptos
+                            de estructuración de código, manejo de ficheros y experiencia de usuario.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-5">
+                            <a href="https://github.com/KikolasDEV/PasswordManager"
+                               class="btn project-btn russo-one-regular" target="_blank">
+                                <i class="fab fa-github me-2"></i> GitHub Code
+                            </a>
                         </div>
                     </div>
-                    <p class="project-description">
-                        El clásico juego retro Snake utilizando Python con la GUI Turtle e implementado mediante OOP. Además cuenta con un archivo y una pequeña BBDD indicándote tu máxima puntuación.
-                    </p>
-                    <div class="d-flex align-items-center gap-3 mt-5">
-                        <a href="https://github.com/KikolasDEV/snake-retro" class="btn project-btn russo-one-regular">
-                            <i class="fab fa-github me-2"></i> GitHub Code
-                        </a>
+                </div>
+
+                <!-- Proyecto Python 2 -->
+                <div class="row align-items-start py-5 project-row">
+                    <div class="col-md-5 proyecto">
+                        <div class="project-image-wrapper">
+                            <img src="{% static 'images/proyectos/personalBlog.png' %}" alt="Personal Blog" class="project-image">
+                        </div>
+                    </div>
+                    <div class="col-md-7 project2">
+                        <div class="d-flex align-items-center mb-3">
+                            <h3 class="project-title russo-one-regular">Personal Blog</h3>
+                            <div class="d-flex gap-2 ms-3">
+                                <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/flask.svg' %}" alt="Flask" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="SQLite" class="tech-icon">
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Desarrollo de un blog personal utilizando <strong>Python</strong>,
+                            <strong>Flask</strong> y <strong>SQLite</strong>. Implementa un
+                            sistema completo de gestión de entradas: creación, edición y borrado
+                            de posts, junto con autenticación básica y separación de permisos
+                            entre administradores y usuarios normales. Es un proyecto orientado
+                            a entender el ciclo completo de una aplicación web: rutas, plantillas,
+                            modelos, formularios y conexión con la base de datos.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-5">
+                            <a href="https://github.com/KikolasDEV/blog-capstone-project"
+                               class="btn project-btn russo-one-regular" target="_blank">
+                                <i class="fab fa-github me-2"></i> GitHub Code
+                            </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
-
-            <!--<div class="text-center mt-5">
-                <h3 class="text-light mas-projects">¿Te interesa ver más?</h3>
-                <div class="d-flex justify-content-center gap-5 mt-5">
-                    <button class="btn-neon-project backend russo-one-regular">
-                        <span></span><span></span><span></span><span></span>
-                        <a href="{% url 'backend_projects' %}" class="btn-link">Backend</a>
-                    </button>
-                    <button class="btn-neon-project websites russo-one-regular">
-                        <span></span><span></span><span></span><span></span>
-                        <a href="{% url 'websites_projects' %}" class="btn-link">Websites</a>
-                    </button>
-                    <button class="btn-neon-project games russo-one-regular">
-                        <span></span><span></span><span></span><span></span>
-                        <a href="{% url 'games_projects' %}" class="btn-link">Games</a>
-                    </button>
-                </div>
-            </div>-->
-
         </div>
     </section>
-
 
     <!-- Sección: CONOCIMIENTOS -->
     <section id="conocimientos-timeline" class="py-5 mt-5 pt-5 roboto-regular">
@@ -284,19 +344,38 @@
                     </div>
                 </div>
                 <div class="col-md-5 right-card">
-                    <div class="knowledge-card">
-                        <h3>Certificaciones 📜</h3>
+                    <div class="knowledge-card knowledge-card-cert">
+                        <h3>Licencias / Certificaciones 📜</h3>
+
+                        <h4>
+                            <img src="{% static 'images/tecnologias/ipartek.jpg' %}" alt="ipartek" class="icon-ud">
+                            Procesamiento de Datos con Java
+                        </h4>
+                        <p>IPARTEK · Septiembre 2025 - Noviembre 2025</p>
+
+                        <h4>
+                            <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
+                            The Ultimate MySQL Bootcamp
+                        </h4>
+                        <p>Colt Steele · Julio 2025</p>
+
+                        <h4>
+                            <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
+                            Ultimate Docker
+                        </h4>
+                        <p>Nicolas Schurmann · Julio 2025</p>
+
                         <h4>
                             <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
                             Python and Django FullStack Developer Bootcamp
                         </h4>
-                        <p>Jose Portilla | Octubre 2024 - Noviembre 2024</p>
+                        <p>Jose Portilla · Octubre 2024 - Noviembre 2024</p>
 
                         <h4 class="mt-4 pt-2">
                             <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
                             The Complete Python Pro Bootcamp
                         </h4>
-                        <p>Angela Yu | Junio 2024 - Septiembre 2024</p>
+                        <p>Angela Yu · Junio 2024 - Septiembre 2024</p>
                     </div>
                 </div>
             </div>
@@ -306,6 +385,8 @@
                 <div class="col-md-5 left-card">
                     <div class="knowledge-card">
                         <h3>Formación 📚</h3>
+                        <h4>C.F.G.S. Desarrollo de Aplicaciones Web</h4>
+                        <p>Ilerna Online | Septiembre 2025 - Junio 2026</p>
                         <h4>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</h4>
                         <p>IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
                         <h4 class="mt-4 pt-2">Grado en Arte Dramático</h4>
@@ -334,17 +415,16 @@
                     <div class="knowledge-card">
                         <h3>Aprendiendo 💡</h3>
                         <div class="tech-grid">
-                            <img src="{% static 'images/tecnologias/docker.svg' %}" alt="Docker">
-                            <img src="{% static 'images/tecnologias/reflex.svg' %}" alt="Reflex">
-                            <img src="{% static 'images/tecnologias/csharp.svg' %}" alt="C#">
                             <img src="{% static 'images/tecnologias/c-plusplus.svg' %}" alt="C++">
+                            <img src="{% static 'images/tecnologias/unreal_engine.svg' %}" alt="Unreal Engine">
+                            <img src="{% static 'images/tecnologias/csharp.svg' %}" alt="C#">
+                            <img src="{% static 'images/tecnologias/unity.svg' %}" alt="Unity">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Sección: CONTACTO -->
     <section id="contacto" class="py-5 roboto-regular">
@@ -362,8 +442,8 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-md-12">
                     <h2 class="lead text-center contact-descripcion">
-                        Rellena este formulario o escribe a mi correo
                         <strong>
+                            Rellena este formulario o escribe a mi correo
                             <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="gmail-contact mb-1 ms-1">
                             kikoamarillo94@gmail.com
                         </strong>
@@ -431,7 +511,9 @@
                 <!-- Fila 4: Botón Enviar -->
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-danger mt-4 btn-contact russo-one-regular mt-4">Enviar</button>
+                        <button type="submit" class="btn hero-btn hero-btn-outline btn-contact russo-one-regular mt-4">
+                            Enviar
+                        </button>
                     </div>
                 </div>
             </form>
@@ -441,5 +523,3 @@
 </div>
 
 {% endblock %}
-
-
