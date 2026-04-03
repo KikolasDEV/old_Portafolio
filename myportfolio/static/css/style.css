@@ -1796,3 +1796,593 @@ footer .nav-link:hover {
         padding: 2.4rem 1.8rem; 
     }
 }
+
+/* ---------------------- RESPONSIVE OVERRIDES ---------------------- */
+
+@media (max-width: 1199.98px) {
+    .navbar {
+        width: calc(100% - 24px);
+    }
+
+    #presentacion .col-md-8 {
+        margin-top: 24px;
+    }
+
+    .email {
+        font-size: 1.05rem;
+    }
+
+    .technologies .tech-row {
+        gap: 18px;
+    }
+
+    .technologies .tech-row img {
+        width: 54px;
+        height: 54px;
+    }
+
+    #sobre-mi .image-container {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        aspect-ratio: 0.9 / 1;
+    }
+
+    #sobre-mi .col-md-7 {
+        max-height: none;
+        gap: 1.1rem;
+    }
+
+    .project-title {
+        font-size: 1.55rem;
+    }
+
+    .project-description {
+        max-width: 100%;
+    }
+
+    .project2 {
+        padding-left: 0;
+    }
+
+    .knowledge-card {
+        max-width: 100%;
+    }
+
+    .left-card {
+        transform: translateX(10px);
+    }
+
+    .right-card {
+        transform: translateX(-10px);
+    }
+
+    .contact-page {
+        max-width: 100%;
+        padding: 2.8rem 2.25rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .navbar-collapse {
+        margin-top: 12px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .navbar-nav {
+        align-items: center;
+        gap: 2px;
+    }
+
+    .nav-link {
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    #presentacion {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #presentacion .content-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    #presentacion .row {
+        row-gap: 24px;
+    }
+
+    #presentacion .col-md-4,
+    #presentacion .col-md-8 {
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    #presentacion .col-md-8 {
+        margin-top: 0;
+    }
+
+    .profile-image {
+        width: 210px;
+        height: 210px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .ubicacion,
+    .ubicacion-ajustada {
+        margin-right: 0;
+        justify-content: center;
+        font-size: 1.08rem;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .btn-descargar,
+    .btn-descargar-inline {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .btn-descargar-inline {
+        min-width: 260px;
+    }
+
+    .nombre-completo,
+    .writing {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    #cursor {
+        font-size: 2rem;
+    }
+
+    .index-descripcion {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 0.35rem;
+    }
+
+    .icons-section,
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .email {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        font-size: 1rem;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .technologies {
+        margin-top: 8px;
+        padding: 0 6px;
+    }
+
+    .technologies .tech-grid {
+        gap: 18px;
+    }
+
+    .technologies .tech-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .technologies .tech-row img {
+        width: 52px;
+        height: 52px;
+    }
+
+    #sobre-mi .row {
+        row-gap: 26px;
+    }
+
+    #sobre-mi .col-md-5,
+    #sobre-mi .col-md-7 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #sobre-mi .col-md-7 {
+        text-align: left;
+    }
+
+    #sobre-mi h2,
+    .sobre-mi-title {
+        font-size: 2.15rem;
+        margin-top: 0;
+    }
+
+    #sobre-mi p {
+        font-size: 1rem;
+        line-height: 1.72;
+    }
+
+    #sobre-mi blockquote {
+        font-size: 1.15rem;
+        line-height: 1.7;
+        margin-top: 12px;
+    }
+
+    .project-row {
+        margin-bottom: 54px;
+    }
+
+    .project-image-wrapper {
+        margin-bottom: 22px;
+    }
+
+    .project-description {
+        font-size: 0.98rem;
+    }
+
+    .project-title {
+        font-size: 1.45rem;
+    }
+
+    .project-kicker {
+        margin-bottom: 10px;
+    }
+
+    .knowledge-card::after {
+        display: none;
+    }
+
+    .left-card,
+    .right-card {
+        transform: none;
+    }
+
+    .timeline-line {
+        height: calc(100% + 72px);
+    }
+
+    .contact-descripcion {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        width: calc(100% - 16px);
+        padding: 10px 14px;
+    }
+
+    .logotype {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .language-switcher {
+        margin-top: 6px;
+    }
+
+    #presentacion {
+        margin-top: 88px !important;
+        padding-top: 0 !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .profile-image {
+        width: 170px;
+        height: 170px;
+    }
+
+    .ubicacion,
+    .ubicacion-ajustada {
+        font-size: 0.98rem;
+        gap: 8px;
+    }
+
+    .btn-descargar-inline {
+        min-width: 100%;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .nombre-completo,
+    .writing {
+        font-size: 1.55rem;
+        line-height: 1.18;
+    }
+
+    .index-descripcion {
+        font-size: 1.4rem;
+        padding-top: 0;
+    }
+
+    .social-links {
+        gap: 12px;
+        margin-top: 0 !important;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .email {
+        font-size: 0.95rem;
+        line-height: 1.45;
+    }
+
+    .btn.hero-btn-solid {
+        width: 100%;
+        max-width: 300px;
+        min-height: 52px;
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+
+    .technologies .tech-grid {
+        gap: 16px;
+    }
+
+    .technologies .tech-row {
+        gap: 14px;
+    }
+
+    .technologies .tech-row img {
+        width: 46px;
+        height: 46px;
+    }
+
+    #sobre-mi {
+        margin-top: 2rem !important;
+        padding-top: 1rem !important;
+    }
+
+    #sobre-mi .image-container {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    #sobre-mi h2,
+    .sobre-mi-title {
+        font-size: 1.95rem;
+        text-align: left;
+    }
+
+    #sobre-mi p {
+        font-size: 0.98rem;
+        line-height: 1.68;
+    }
+
+    #sobre-mi blockquote {
+        font-size: 1rem;
+        line-height: 1.65;
+        padding: 0 10px;
+    }
+
+    #proyectos {
+        gap: 42px;
+    }
+
+    #proyectos h2,
+    #conocimientos-timeline h2,
+    #contacto h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.12em;
+    }
+
+    .project-filters {
+        gap: 12px;
+    }
+
+    .project-filter-btn {
+        width: 100%;
+        max-width: 300px;
+        font-size: 0.82rem;
+        padding: 11px 18px;
+    }
+
+    #proyectos .row {
+        margin-top: 28px;
+    }
+
+    .project-title,
+    .project-description,
+    .project-kicker,
+    .d-flex.align-items-center.mb-3 {
+        text-align: left;
+    }
+
+    .tech-icon {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 10px;
+    }
+
+    .btn.project-btn {
+        width: 100%;
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .timeline-stage {
+        margin-bottom: 26px;
+    }
+
+    .knowledge-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .knowledge-card h3 {
+        font-size: 0.86rem;
+        letter-spacing: 0.14em;
+    }
+
+    .knowledge-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .knowledge-card p,
+    .knowledge-card ul li,
+    .knowledge-card-cert p {
+        font-size: 0.86rem;
+        line-height: 1.58;
+    }
+
+    .knowledge-card-learning .tech-grid {
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .contact-page {
+        padding: 2rem 1.1rem;
+        border-radius: 18px;
+    }
+
+    .contact-descripcion {
+        font-size: 0.96rem;
+    }
+
+    #contacto label,
+    #contacto .form-label {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+
+    #editor {
+        height: 220px !important;
+    }
+
+    .ql-toolbar.ql-snow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .footer-links,
+    .footer-info {
+        width: 100%;
+        text-align: left;
+    }
+
+    .footer-info {
+        align-items: flex-start !important;
+    }
+
+    .footer-info .d-flex {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .footer-info .d-flex span {
+        margin: 0 !important;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .navbar {
+        width: calc(100% - 12px);
+        border-radius: 28px;
+    }
+
+    .navbar .container {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .nav-link {
+        font-size: 0.84rem;
+    }
+
+    .language-toggle {
+        font-size: 0.68rem;
+        padding: 6px 8px;
+    }
+
+    #presentacion .col-md-4,
+    #presentacion .col-md-8 {
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    .nombre-completo,
+    .writing {
+        font-size: 1.38rem;
+    }
+
+    #cursor {
+        font-size: 1.7rem;
+    }
+
+    .index-descripcion {
+        font-size: 1.22rem;
+    }
+
+    .btn.hero-btn,
+    .btn.project-btn,
+    .project-filter-btn,
+    .btn-contact {
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+    }
+
+    .technologies .tech-row img {
+        width: 42px;
+        height: 42px;
+    }
+
+    #sobre-mi p,
+    .project-description,
+    .contact-descripcion,
+    .knowledge-card p,
+    .knowledge-card ul li {
+        font-size: 0.92rem;
+    }
+
+    .project-title {
+        font-size: 1.28rem;
+    }
+
+    .tech-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #contacto .form-control,
+    #contacto .form-select {
+        font-size: 0.9rem;
+        padding: 0.7rem 0.9rem;
+    }
+}
