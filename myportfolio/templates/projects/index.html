@@ -11,15 +11,15 @@
             <div class="row align-items-center">
                 <!-- Columna Izquierda -->
                 <div class="col-12 col-md-4 text-start px-5 py-5">
-                    <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3 mx-5">
+                    <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3 mx-3">
                     <div class="ubicacion-container d-flex align-items-center justify-content-center">
-                        <div class="ubicacion">
+                        <div class="ubicacion ubicacion-ajustada">
                             <img src="{% static 'images/logos/ubicacion.png' %}" alt="{% if lang == 'en' %}Location{% else %}Ubicación{% endif %}" class="icon me-2">
                             <span>{% if lang == 'en' %}Jerez de la Frontera, Spain{% else %}Jerez de la Frontera, España{% endif %}</span>
                         </div>
                     </div>
                     <a href="{% if lang == 'en' %}{% static 'CV_Jose_Francisco_Gonzalez_Amarillo_EN.pdf' %}{% else %}{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}{% endif %}"
-                       class="btn hero-btn hero-btn-outline mt-3 mx-5 px-5 btn-descargar"
+                       class="btn hero-btn hero-btn-outline mt-3 mx-3 px-5 btn-descargar btn-descargar-inline"
                        download="{% if lang == 'en' %}CV_Jose_Francisco_Gonzalez_Amarillo_EN.pdf{% else %}CV_Jose_Francisco_Gonzalez_Amarillo.pdf{% endif %}">
                         {% if lang == 'en' %}Download CV{% else %}Descargar CV{% endif %}
                     </a>
@@ -57,24 +57,36 @@
             </div>
             <div class="technologies mt-5 pt-5 mb-5">
                 <div class="tech-grid">
-                    <img src="{% static 'images/tecnologias/java.svg' %}" alt="java">
-                    <img src="{% static 'images/tecnologias/spring.svg' %}" alt="spring">
-                    <img src="{% static 'images/tecnologias/python.svg' %}" alt="python">
-                    <img src="{% static 'images/tecnologias/flask.svg' %}" alt="flask">
-                    <img src="{% static 'images/tecnologias/django.svg' %}" alt="django">
-                    <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="fastapi">
-                    <img src="{% static 'images/tecnologias/html.svg' %}" alt="html">
-                    <img src="{% static 'images/tecnologias/css.svg' %}" alt="css">
-                    <img src="{% static 'images/tecnologias/javascript.svg' %}" alt="javascript">
-                    <img src="{% static 'images/tecnologias/react.svg' %}" alt="react">
-                    <img src="{% static 'images/tecnologias/mongodb.svg' %}" alt="mongodb">
-                    <img src="{% static 'images/tecnologias/mysql.svg' %}" alt="mysql">
-                    <img src="{% static 'images/tecnologias/postgresql.svg' %}" alt="postgresql">
-                    <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="sqlite">
-                    <img src="{% static 'images/tecnologias/git.svg' %}" alt="git">
-                    <img src="{% static 'images/tecnologias/github.svg' %}" alt="github">
-                    <img src="{% static 'images/tecnologias/aws.svg' %}" alt="AWS">
-                    <img src="{% static 'images/tecnologias/docker.svg' %}" alt="Docker">
+                    <div class="tech-row">
+                        <img src="{% static 'images/tecnologias/javascript.svg' %}" alt="JavaScript">
+                        <img src="{% static 'images/tecnologias/typescript.svg' %}" alt="TypeScript">
+                        <img src="{% static 'images/tecnologias/react.svg' %}" alt="React">
+                        <img src="{% static 'images/tecnologias/angular.svg' %}" alt="Angular">
+                        <img src="{% static 'images/tecnologias/java.svg' %}" alt="Java">
+                        <img src="{% static 'images/tecnologias/spring.svg' %}" alt="Spring">
+                        <img src="{% static 'images/tecnologias/python.svg' %}" alt="Python">
+                        <img src="{% static 'images/tecnologias/django.svg' %}" alt="Django">
+                        <img src="{% static 'images/tecnologias/flask.svg' %}" alt="Flask">
+                        <img src="{% static 'images/tecnologias/fastapi.svg' %}" alt="FastAPI">
+                        <img src="{% static 'images/tecnologias/html.svg' %}" alt="HTML">
+                        <img src="{% static 'images/tecnologias/css.svg' %}" alt="CSS">
+                        <img src="{% static 'images/tecnologias/tailwindcss.svg' %}" alt="TailwindCSS">
+                    </div>
+                    <div class="tech-row">
+                        <img src="{% static 'images/tecnologias/mysql.svg' %}" alt="MySQL">
+                        <img src="{% static 'images/tecnologias/postgresql.svg' %}" alt="PostgreSQL">
+                        <img src="{% static 'images/tecnologias/sqlite.svg' %}" alt="SQLite">
+                        <img src="{% static 'images/tecnologias/mongodb.svg' %}" alt="MongoDB">
+                        <img src="{% static 'images/tecnologias/claude-ai-icon.svg' %}" alt="Claude">
+                        <img src="{% static 'images/tecnologias/opencode-dark.svg' %}" alt="Opencode">
+                        <img src="{% static 'images/tecnologias/openai_dark.svg' %}" alt="OpenAI">
+                        <img src="{% static 'images/tecnologias/gemini.svg' %}" alt="Gemini">
+                        <img src="{% static 'images/tecnologias/v0_dark.svg' %}" alt="v0">
+                        <img src="{% static 'images/tecnologias/git.svg' %}" alt="git">
+                        <img src="{% static 'images/tecnologias/github.svg' %}" alt="github">
+                        <img src="{% static 'images/tecnologias/aws.svg' %}" alt="aws">
+                        <img src="{% static 'images/tecnologias/docker.svg' %}" alt="docker">
+                    </div>
                 </div>
             </div>
         </div>

@@ -676,6 +676,10 @@ footer .nav-link:hover {
     margin-right: 70px;
 }
 
+.ubicacion-ajustada {
+    margin-right: 65px;
+}
+
 .ubicacion-container {
     display: flex;
     align-items: center;
@@ -691,10 +695,20 @@ footer .nav-link:hover {
     margin-left: 35px;
 }
 
+.btn-descargar-inline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 240px;
+}
+
 .writing {
     display: inline-block;
     color: var(--accent-soft);
-    font-size: 2.25rem;
+    font-size: 2.08rem;
 }
 
 #cursor {
@@ -714,7 +728,7 @@ footer .nav-link:hover {
 }
 
 .nombre-completo {
-    font-size: 2.25rem;
+    font-size: 2.08rem;
     line-height: 1.2;
     text-align: right;
 }
@@ -771,6 +785,31 @@ footer .nav-link:hover {
 .tech-grid img:hover {
     transform: scale(1.1);
     z-index: 10;
+}
+
+/* Stack principal de tecnologias (2 lineas x 13) */
+.technologies .tech-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    padding: 0;
+}
+
+.technologies .tech-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.technologies .tech-row img {
+    width: 64px;
+    height: 64px;
 }
 
 .icons-wrapper {
