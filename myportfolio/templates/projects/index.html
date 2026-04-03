@@ -14,14 +14,14 @@
                     <img src="{% static 'images/Kiko_Amarillo_CARA.jpg' %}" alt="José Francisco González Amarillo" class="rounded-circle profile-image mb-3 mx-5">
                     <div class="ubicacion-container d-flex align-items-center justify-content-center">
                         <div class="ubicacion">
-                            <img src="{% static 'images/logos/ubicacion.png' %}" alt="Ubicación" class="icon me-2">
-                            <span>Jerez de la Frontera, España</span>
+                            <img src="{% static 'images/logos/ubicacion.png' %}" alt="{% if lang == 'en' %}Location{% else %}Ubicación{% endif %}" class="icon me-2">
+                            <span>{% if lang == 'en' %}Jerez de la Frontera, Spain{% else %}Jerez de la Frontera, España{% endif %}</span>
                         </div>
                     </div>
-                    <a href="{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}"
+                    <a href="{% if lang == 'en' %}{% static 'CV_Jose_Francisco_Gonzalez_Amarillo_EN.pdf' %}{% else %}{% static 'CV_Jose_Francisco_Gonzalez_Amarillo.pdf' %}{% endif %}"
                        class="btn hero-btn hero-btn-outline mt-3 mx-5 px-5 btn-descargar"
-                       download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
-                        Descargar CV
+                       download="{% if lang == 'en' %}CV_Jose_Francisco_Gonzalez_Amarillo_EN.pdf{% else %}CV_Jose_Francisco_Gonzalez_Amarillo.pdf{% endif %}">
+                        {% if lang == 'en' %}Download CV{% else %}Descargar CV{% endif %}
                     </a>
                 </div>
 
@@ -50,7 +50,7 @@
                             <span class="hero-line hero-line-right"></span>
                             <span class="hero-line hero-line-bottom"></span>
                             <span class="hero-line hero-line-left"></span>
-                            Disponible para trabajar
+                            {% if lang == 'en' %}Available for work{% else %}Disponible para trabajar{% endif %}
                         </button>
                     </div>
                 </div>
@@ -93,7 +93,34 @@
 
                  <!-- Columna Derecha: Contenido -->
                 <div class="col-md-7 roboto-regular">
-                    <h2 class="russo-one-regular sobre-mi-title">Sobre mí</h2>
+                    <h2 class="russo-one-regular sobre-mi-title">{% if lang == 'en' %}About Me{% else %}Sobre mí{% endif %}</h2>
+                    {% if lang == 'en' %}
+                    <p>
+                        Hello there! I'm a <strong>software developer</strong> with most of my experience centered on
+                        <strong>Java</strong> and <strong>Python</strong>, working with frameworks such as
+                        <strong>Spring</strong>, <strong>Django</strong>, <strong>Flask</strong>, and
+                        <strong>FastAPI</strong>. I started from a very <strong>backend-focused</strong> mindset, but
+                        over time I have enjoyed <strong>frontend</strong> work more and more, building modern
+                        interfaces with <strong>React</strong> and <strong>Angular</strong> while growing into a solid
+                        <strong>FullStack Developer</strong> profile.
+                    </p>
+                    <p>
+                        My path combines <strong>formal education</strong> in software development with
+                        <strong>bootcamps</strong> and many personal projects. I've worked in real environments building
+                        web applications, REST APIs, and internal systems, using SQL databases such as
+                        <strong>MySQL</strong> and <strong>PostgreSQL</strong>, NoSQL solutions like
+                        <strong>MongoDB</strong>, plus <strong>Docker</strong> and version control with
+                        <strong>Git</strong> and <strong>GitHub</strong>.
+                    </p>
+                    <p>
+                        I'm a <strong>curious</strong> person and deeply driven by learning: I usually have a challenge,
+                        mini-project, or new idea in progress. I enjoy teamwork, sharing knowledge, and finding
+                        <strong>practical and maintainable</strong> solutions. I also have <strong>immediate
+                        availability</strong> and flexibility to <strong>relocate</strong> if the project requires it.
+                        My goal is to keep growing by combining strong technical skills with the soft skills I hope to
+                        show in every collaboration.
+                    </p>
+                    {% else %}
                     <p>
                         ¡Muy buenas! Soy <strong>desarrollador de software</strong> con experiencia principalmente en
                         <strong>Java</strong> y <strong>Python</strong>, trabajando con frameworks como
@@ -119,6 +146,7 @@
                         si el proyecto lo requiere. En resumen, mi objetivo es seguir creciendo combinando parte técnica
                         y <strong>soft skills</strong> que espero demostraros en nuestros encuentros.
                     </p>
+                    {% endif %}
                 </div>
             </div>
 
@@ -126,7 +154,7 @@
             <div class="row py-5">
                 <div class="col-12">
                     <blockquote class="text-center text-light">
-                        "Somos individuos únicos y auténticos que nos conformamos con respuestas programadas. Bastaría con alterar los parámetros."
+                        {% if lang == 'en' %}"We are unique and authentic individuals who settle for programmed answers. It would be enough to alter the parameters."{% else %}"Somos individuos únicos y auténticos que nos conformamos con respuestas programadas. Bastaría con alterar los parámetros."{% endif %}
                     </blockquote>
                 </div>
             </div>
@@ -136,18 +164,18 @@
     <!-- Sección: PROYECTOS -->
     <section id="proyectos" class="py-5 mt-5 roboto-regular">
         <div class="container">
-            <h2 class="text-center russo-one-regular py-3 mt-5">Proyectos</h2>
+            <h2 class="text-center russo-one-regular py-3 mt-5">{% if lang == 'en' %}Projects{% else %}Proyectos{% endif %}</h2>
 
             <!-- Filtros Web / Java / Python -->
             <div class="project-filters text-center mt-4 mb-4">
                 <button type="button" class="project-filter-btn active" data-lang="web">
-                    Proyectos Web
+                    {% if lang == 'en' %}Web Projects{% else %}Proyectos Web{% endif %}
                 </button>
                 <button type="button" class="project-filter-btn" data-lang="java">
-                    Proyectos Java
+                    {% if lang == 'en' %}Java Projects{% else %}Proyectos Java{% endif %}
                 </button>
                 <button type="button" class="project-filter-btn" data-lang="python">
-                    Proyectos Python
+                    {% if lang == 'en' %}Python Projects{% else %}Proyectos Python{% endif %}
                 </button>
             </div>
 
@@ -159,7 +187,7 @@
                         </div>
                     </div>
                     <div class="col-md-7">
-                        <div class="project-kicker russo-one-regular">Proyecto destacado</div>
+                        <div class="project-kicker russo-one-regular">{% if lang == 'en' %}Featured Project{% else %}Proyecto destacado{% endif %}</div>
                         <div class="d-flex align-items-center mb-3 flex-wrap">
                             <h3 class="project-title russo-one-regular">Yellow Airline</h3>
                             <div class="d-flex gap-2 ms-3 flex-wrap">
@@ -171,18 +199,22 @@
                             </div>
                         </div>
                         <p class="project-description">
+                            {% if lang == 'en' %}
+                            A full-stack flight booking application and one of the strongest projects I have built so far. It includes interactive flight search, authentication, seat selection, payments with <strong>Stripe</strong>, a reservations dashboard, and boarding pass generation as <strong>PDF with QR</strong>. It is also deployed to production with the frontend on <strong>Vercel</strong> and the backend on <strong>Railway</strong>.
+                            {% else %}
                             Aplicación full stack de reservas de vuelos desarrollada como uno de mis proyectos más
                             completos hasta la fecha. Incluye búsqueda interactiva de vuelos, autenticación,
                             selección de asientos, pagos con <strong>Stripe</strong>, panel de reservas y generación de
                             boarding pass en <strong>PDF con QR</strong>. Además, está desplegada en producción con el
                             frontend en <strong>Vercel</strong> y el backend en <strong>Railway</strong>.
+                            {% endif %}
                         </p>
                         <div class="d-flex align-items-center gap-3 mt-5 flex-wrap">
                             <a href="https://yellow-airline.vercel.app/"
                                class="btn project-btn russo-one-regular"
                                target="_blank"
                                rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt me-2"></i> Ver demo
+                                <i class="fas fa-external-link-alt me-2"></i> {% if lang == 'en' %}Live Demo{% else %}Ver demo{% endif %}
                             </a>
                             <a href="https://github.com/KikolasDEV/yellow-airline"
                                class="btn project-btn russo-one-regular"
@@ -215,12 +247,16 @@
                             </div>
                         </div>
                         <p class="project-description">
+                            {% if lang == 'en' %}
+                            A lightweight recipe management application built with <strong>Java</strong>, <strong>Spring</strong> and <strong>SQLite</strong>. It covers the full flow of a small CRUD app: controllers, services, repositories, validation, and persistence, with a focus on layered architecture and code organization.
+                            {% else %}
                             Aplicación sencilla de gestión de recetas culinarias desarrollada con
                             <strong>Java</strong>, <strong>Spring</strong> y <strong>SQLite</strong>.  
                             Permite crear y consultar recetas, trabajando el flujo completo de
                             una pequeña aplicación CRUD: controladores, servicios, repositorios
                             y persistencia en base de datos. Es un proyecto orientado a practicar
                             arquitectura por capas, validación de datos y organización del código.
+                            {% endif %}
                         </p>
                         <div class="d-flex align-items-center gap-3 mt-5">
                             <a href="https://github.com/KikolasDEV/recetas-prueba-tecnica"
@@ -251,6 +287,9 @@
                             </div>
                         </div>
                         <p class="project-description">
+                            {% if lang == 'en' %}
+                            A repository that gathers different projects built during my IPARTEK training: <strong>Java</strong> and <strong>Spring</strong> exercises, small web applications with <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>, and examples integrated with <strong>SQLite</strong>. Its goal is to reinforce collections, MVC, forms, templates, and REST endpoints.
+                            {% else %}
                             Repositorio que agrupa distintos proyectos desarrollados durante la
                             formación en IPARTEK: ejercicios de <strong>Java</strong> y
                             <strong>Spring</strong>, pequeñas aplicaciones web con
@@ -258,6 +297,7 @@
                             y ejemplos de integración con <strong>SQLite</strong>.  
                             El objetivo es consolidar conceptos de colecciones, MVC, manejo de
                             formularios, plantillas y exposición de endpoints REST.
+                            {% endif %}
                         </p>
                         <div class="d-flex align-items-center gap-3 mt-5">
                             <a href="https://github.com/KikolasDEV/java-2901"
@@ -287,11 +327,15 @@
                             </div>
                         </div>
                         <p class="project-description">
+                            {% if lang == 'en' %}
+                            A password management app developed in <strong>Python</strong> with a <strong>Tkinter</strong> GUI. It stores multiple credentials in a <strong>JSON</strong> file and focuses on code structure, file handling, and user experience.
+                            {% else %}
                             Aplicación de gestión de contraseñas desarrollada en <strong>Python</strong>
                             junto con su GUI <strong>Tkinter</strong>. Permite almacenar y gestionar
                             de forma segura múltiples contraseñas en un archivo <strong>JSON</strong>,
                             ofreciendo una interfaz intuitiva para el usuario y trabajando conceptos
                             de estructuración de código, manejo de ficheros y experiencia de usuario.
+                            {% endif %}
                         </p>
                         <div class="d-flex align-items-center gap-3 mt-5">
                             <a href="https://github.com/KikolasDEV/PasswordManager"
@@ -319,6 +363,9 @@
                             </div>
                         </div>
                         <p class="project-description">
+                            {% if lang == 'en' %}
+                            A personal blog built with <strong>Python</strong>, <strong>Flask</strong> and <strong>SQLite</strong>. It includes a complete post management flow, basic authentication, role separation, and the core lifecycle of a web application: routes, templates, models, forms, and database connection.
+                            {% else %}
                             Desarrollo de un blog personal utilizando <strong>Python</strong>,
                             <strong>Flask</strong> y <strong>SQLite</strong>. Implementa un
                             sistema completo de gestión de entradas: creación, edición y borrado
@@ -326,6 +373,7 @@
                             entre administradores y usuarios normales. Es un proyecto orientado
                             a entender el ciclo completo de una aplicación web: rutas, plantillas,
                             modelos, formularios y conexión con la base de datos.
+                            {% endif %}
                         </p>
                         <div class="d-flex align-items-center gap-3 mt-5">
                             <a href="https://github.com/KikolasDEV/blog-capstone-project"
@@ -342,32 +390,32 @@
 
     <!-- Sección: CONOCIMIENTOS -->
     <section id="conocimientos-timeline" class="py-5 mt-5 pt-5 roboto-regular">
-        <h2 class="h2 text-center russo-one-regular py-5 mt-5 mb-5">Conocimientos</h2>
+        <h2 class="h2 text-center russo-one-regular py-5 mt-5 mb-5">{% if lang == 'en' %}Background{% else %}Conocimientos{% endif %}</h2>
         <div class="container position-relative py-5">
 
             <!-- Card 1 -->
             <div class="row g-4">
                 <div class="col-md-5 left-card">
                     <div class="knowledge-card">
-                        <h3>Experiencia 🪙</h3>
+                        <h3>{% if lang == 'en' %}Experience 🪙{% else %}Experiencia 🪙{% endif %}</h3>
                         <div>
                             <h4>FullStack Developer - DYPAI</h4>
-                            <p>Septiembre 2024 - Diciembre 2025</p>
+                            <p>{% if lang == 'en' %}September 2024 - December 2025{% else %}Septiembre 2024 - Diciembre 2025{% endif %}</p>
                             <ul>
-                                <li>Creación, desarrollo y mantenimiento de páginas web y múltiples componentes con React.</li>
-                                <li>Conexión entre el backend y el frontend creando rutas API con Flask o FastAPI y usando MongoDB como BBDD.</li>
-                                <li>Almacenamiento de imágenes en buckets con AWS S3.</li>
-                                <li>Compenetración de tareas y objetivos a través de Notion y manejo de versiones en GitHub con Fork.</li>
+                                <li>{% if lang == 'en' %}Creation, development, and maintenance of websites and multiple React components.{% else %}Creación, desarrollo y mantenimiento de páginas web y múltiples componentes con React.{% endif %}</li>
+                                <li>{% if lang == 'en' %}Backend and frontend integration through API routes built with Flask or FastAPI using MongoDB as the database layer.{% else %}Conexión entre el backend y el frontend creando rutas API con Flask o FastAPI y usando MongoDB como BBDD.{% endif %}</li>
+                                <li>{% if lang == 'en' %}Image storage in AWS S3 buckets.{% else %}Almacenamiento de imágenes en buckets con AWS S3.{% endif %}</li>
+                                <li>{% if lang == 'en' %}Task coordination and version handling through Notion, GitHub, and Fork.{% else %}Compenetración de tareas y objetivos a través de Notion y manejo de versiones en GitHub con Fork.{% endif %}</li>
                             </ul>
                         </div>
 
                         <div class="mt-4 pt-2">
                             <h4>Software Developer - Abaco Developments</h4>
-                            <p>Abril 2024 - Junio 2024</p>
+                            <p>{% if lang == 'en' %}April 2024 - June 2024{% else %}Abril 2024 - Junio 2024{% endif %}</p>
                             <ul>
-                                <li>Desarrollo de aplicaciones utilizando Python y FlySpeed SQL.</li>
-                                <li>Optimización de bases de datos y análisis de datos.</li>
-                                <li>Desarrollo de soluciones para mejorar la organización y trabajo en equipo.</li>
+                                <li>{% if lang == 'en' %}Application development using Python and FlySpeed SQL.{% else %}Desarrollo de aplicaciones utilizando Python y FlySpeed SQL.{% endif %}</li>
+                                <li>{% if lang == 'en' %}Database optimization and data analysis support.{% else %}Optimización de bases de datos y análisis de datos.{% endif %}</li>
+                                <li>{% if lang == 'en' %}Solutions focused on improving organization and teamwork.{% else %}Desarrollo de soluciones para mejorar la organización y trabajo en equipo.{% endif %}</li>
                             </ul>
                         </div>
                     </div>
@@ -392,37 +440,37 @@
                 </div>
                 <div class="col-md-5 right-card">
                     <div class="knowledge-card knowledge-card-cert">
-                        <h3>Licencias / Certificaciones 📜</h3>
+                        <h3>{% if lang == 'en' %}Licenses / Certifications 📜{% else %}Licencias / Certificaciones 📜{% endif %}</h3>
 
                         <h4>
                             <img src="{% static 'images/tecnologias/ipartek.jpg' %}" alt="ipartek" class="icon-ud">
-                            Procesamiento de Datos con Java
+                            {% if lang == 'en' %}Data Processing with Java{% else %}Procesamiento de Datos con Java{% endif %}
                         </h4>
-                        <p>IPARTEK · Septiembre 2025 - Noviembre 2025</p>
+                        <p>IPARTEK · {% if lang == 'en' %}September 2025 - November 2025{% else %}Septiembre 2025 - Noviembre 2025{% endif %}</p>
 
                         <h4>
                             <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
                             The Ultimate MySQL Bootcamp
                         </h4>
-                        <p>Colt Steele · Julio 2025</p>
+                        <p>Colt Steele · {% if lang == 'en' %}July 2025{% else %}Julio 2025{% endif %}</p>
 
                         <h4>
                             <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
                             Ultimate Docker
                         </h4>
-                        <p>Nicolas Schurmann · Julio 2025</p>
+                        <p>Nicolas Schurmann · {% if lang == 'en' %}July 2025{% else %}Julio 2025{% endif %}</p>
 
                         <h4>
                             <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
                             Python and Django FullStack Developer Bootcamp
                         </h4>
-                        <p>Jose Portilla · Octubre 2024 - Noviembre 2024</p>
+                        <p>Jose Portilla · {% if lang == 'en' %}October 2024 - November 2024{% else %}Octubre 2024 - Noviembre 2024{% endif %}</p>
 
                         <h4 class="mt-4 pt-2">
                             <img src="{% static 'images/tecnologias/udemy.svg' %}" alt="udemy" class="icon-ud">
                             The Complete Python Pro Bootcamp
                         </h4>
-                        <p>Angela Yu · Junio 2024 - Septiembre 2024</p>
+                        <p>Angela Yu · {% if lang == 'en' %}June 2024 - September 2024{% else %}Junio 2024 - Septiembre 2024{% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -431,13 +479,13 @@
             <div class="row g-4">
                 <div class="col-md-5 left-card">
                     <div class="knowledge-card">
-                        <h3>Formación 📚</h3>
-                        <h4>C.F.G.S. Desarrollo de Aplicaciones Web</h4>
-                        <p>Ilerna Online | Septiembre 2025 - Junio 2026</p>
-                        <h4>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</h4>
-                        <p>IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
-                        <h4 class="mt-4 pt-2">Grado en Arte Dramático</h4>
-                        <p>E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
+                        <h3>{% if lang == 'en' %}Education 📚{% else %}Formación 📚{% endif %}</h3>
+                        <h4>{% if lang == 'en' %}Higher Technician in Web Application Development{% else %}C.F.G.S. Desarrollo de Aplicaciones Web{% endif %}</h4>
+                        <p>Ilerna Online | {% if lang == 'en' %}September 2025 - June 2026{% else %}Septiembre 2025 - Junio 2026{% endif %}</p>
+                        <h4>{% if lang == 'en' %}Higher Technician in Multiplatform Application Development{% else %}C.F.G.S. Desarrollo de Aplicaciones Multiplataforma{% endif %}</h4>
+                        <p>IES Vista Alegre | {% if lang == 'en' %}September 2022 - June 2024{% else %}Septiembre 2022 - Junio 2024{% endif %}</p>
+                        <h4 class="mt-4 pt-2">{% if lang == 'en' %}Bachelor's Degree in Dramatic Arts{% else %}Grado en Arte Dramático{% endif %}</h4>
+                        <p>E.S.A.D. de Sevilla | {% if lang == 'en' %}September 2015 - June 2019{% else %}Septiembre 2015 - Junio 2019{% endif %}</p>
                     </div>
                 </div>
                 <div class="col-md-2 d-flex align-items-center">
@@ -460,7 +508,7 @@
                 </div>
                 <div class="col-md-5 right-card">
                     <div class="knowledge-card">
-                        <h3>Aprendiendo 💡</h3>
+                        <h3>{% if lang == 'en' %}Currently Learning 💡{% else %}Aprendiendo 💡{% endif %}</h3>
                         <div class="tech-grid">
                             <img src="{% static 'images/tecnologias/c-plusplus.svg' %}" alt="C++">
                             <img src="{% static 'images/tecnologias/unreal_engine.svg' %}" alt="Unreal Engine">
@@ -476,7 +524,7 @@
     <!-- Sección: CONTACTO -->
     <section id="contacto" class="py-5 roboto-regular">
         <div class="container contact-page py-5">
-            <h1 class="text-center russo-one-regular mb-4">Contacto</h1>
+            <h1 class="text-center russo-one-regular mb-4">{% if lang == 'en' %}Contact{% else %}Contacto{% endif %}</h1>
 
             {% if messages %}
                 <div class="alert alert-success" role="alert">
@@ -490,7 +538,7 @@
                 <div class="col-md-12">
                     <h2 class="lead text-center contact-descripcion">
                         <strong>
-                            Rellena este formulario o escribe a mi correo
+                            {% if lang == 'en' %}Fill out this form or write to my email{% else %}Rellena este formulario o escribe a mi correo{% endif %}
                             <img src="{% static 'images/logos/gmail.svg' %}" alt="Email Icon" class="gmail-contact mb-1 ms-1">
                             kikoamarillo94@gmail.com
                         </strong>
@@ -521,7 +569,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="editor-container" class="mb-2">Mensaje</label>
+                            <label for="editor-container" class="mb-2">{% if lang == 'en' %}Message{% else %}Mensaje{% endif %}</label>
                             <div id="editor-container">
                                 <span class="ql-formats">
                                     <select class="ql-font"></select>
@@ -550,7 +598,7 @@
                             </div>
                             <div id="editor" style="height: 300px; background-color: white;"></div>
                             <!-- Hidden textarea to hold the content from Quill -->
-                            <textarea name="mensaje" id="mensaje" style="display:none;" placeholder="Escribe tu mensaje..."></textarea>
+                            <textarea name="mensaje" id="mensaje" style="display:none;" placeholder="{% if lang == 'en' %}Write your message...{% else %}Escribe tu mensaje...{% endif %}"></textarea>
                         </div>
                     </div>
                 </div>
@@ -559,7 +607,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <button type="submit" class="btn hero-btn hero-btn-outline btn-contact russo-one-regular mt-4">
-                            Enviar
+                            {% if lang == 'en' %}Send{% else %}Enviar{% endif %}
                         </button>
                     </div>
                 </div>

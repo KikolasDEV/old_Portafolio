@@ -4,10 +4,22 @@ from django.contrib import messages
 from .forms import ContactForm
 import os
 
-# Create your views here.
+SUPPORTED_LANGUAGES = {"es", "en"}
+
+
+def get_language(request):
+    requested_lang = request.GET.get("lang")
+    if requested_lang in SUPPORTED_LANGUAGES:
+        request.session["portfolio_language"] = requested_lang
+        return requested_lang
+    return request.session.get("portfolio_language", "es")
+
+
 def index(request):
+    lang = get_language(request)
+
     if request.method == "POST":
-        form = ContactForm(request.POST)
+        form = ContactForm(request.POST, lang=lang)
         if form.is_valid():
             nombre = form.cleaned_data['nombre']
             email = form.cleaned_data['email']
@@ -19,11 +31,12 @@ def index(request):
                 os.getenv('MAIL_USERNAME'),
                 [os.getenv('MAIL_RECIPIENT')],
             )
-            messages.success(request, 'Mensaje enviado. ¡Gracias por contactarme!')
-            return redirect('index')
+            success_message = 'Message sent. Thanks for reaching out!' if lang == 'en' else 'Mensaje enviado. ¡Gracias por contactarme!'
+            messages.success(request, success_message)
+            return redirect(f'/?lang={lang}#contacto')
     else:
-        form = ContactForm()
-    return render(request, 'projects/index.html', {'form': form})
+        form = ContactForm(lang=lang)
+    return render(request, 'projects/index.html', {'form': form, 'lang': lang})
 
 def backend_projects(request):
     return render(request, 'projects/backend.html')
