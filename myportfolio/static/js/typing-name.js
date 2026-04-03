@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const dynamicName = document.getElementById("dynamic-name");
     const cursor = document.getElementById("cursor");
+
+    if (!dynamicName || !cursor) {
+        return;
+    }
+
+    if (window.innerWidth <= 991) {
+        dynamicName.textContent = "José Francisco";
+        dynamicName.style.color = "#F5EDED";
+        cursor.style.color = "#F5EDED";
+        return;
+    }
     
     const rootStyles = getComputedStyle(document.documentElement);
     const accentSoft = rootStyles.getPropertyValue("--accent-soft").trim();
