@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".project-filter-btn");
+    const webContainer = document.getElementById("web-projects");
     const javaContainer = document.getElementById("java-projects");
     const pythonContainer = document.getElementById("python-projects");
     const javaGrid = document.getElementById("java-projects-grid");
@@ -7,9 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let javaLoaded = false;
 
-    // Estado inicial: solo botones visibles, sin proyectos
-    javaContainer.classList.add("d-none");
-    pythonContainer.classList.add("d-none");
+    function showProjects(lang) {
+        if (webContainer) {
+            webContainer.classList.toggle("d-none", lang !== "web");
+        }
+
+        if (javaContainer) {
+            javaContainer.classList.toggle("d-none", lang !== "java");
+        }
+
+        if (pythonContainer) {
+            pythonContainer.classList.toggle("d-none", lang !== "python");
+        }
+
+        if (lang === "java" && !javaLoaded && javaGrid) {
+            loadJavaProjects();
+            javaLoaded = true;
+        }
+    }
+
+    showProjects("web");
 
     buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -19,19 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             buttons.forEach((b) => b.classList.remove("active"));
             btn.classList.add("active");
 
-            // Ocultamos ambos contenedores y mostramos solo el seleccionado
-            if (lang === "java") {
-                pythonContainer.classList.add("d-none");
-                javaContainer.classList.remove("d-none");
-
-                if (!javaLoaded && javaGrid) {
-                    loadJavaProjects();
-                    javaLoaded = true;
-                }
-            } else if (lang === "python") {
-                javaContainer.classList.add("d-none");
-                pythonContainer.classList.remove("d-none");
-            }
+            showProjects(lang);
 
             // Centrar scroll en la sección Proyectos para ambos casos
             if (proyectosSection) {

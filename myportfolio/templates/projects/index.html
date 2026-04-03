@@ -138,14 +138,61 @@
         <div class="container">
             <h2 class="text-center russo-one-regular py-3 mt-5">Proyectos</h2>
 
-            <!-- Filtros Java / Python -->
+            <!-- Filtros Web / Java / Python -->
             <div class="project-filters text-center mt-4 mb-4">
+                <button type="button" class="project-filter-btn active" data-lang="web">
+                    Proyectos Web
+                </button>
                 <button type="button" class="project-filter-btn" data-lang="java">
                     Proyectos Java
                 </button>
                 <button type="button" class="project-filter-btn" data-lang="python">
                     Proyectos Python
                 </button>
+            </div>
+
+            <div id="web-projects" class="projects-list">
+                <div class="row align-items-start flex-row-reverse project-row">
+                    <div class="col-md-5 proyecto">
+                        <div class="project-image-wrapper">
+                            <img src="{% static 'images/proyectos/yellow-airline.png' %}" alt="Yellow Airline" class="project-image">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="project-kicker russo-one-regular">Proyecto destacado</div>
+                        <div class="d-flex align-items-center mb-3 flex-wrap">
+                            <h3 class="project-title russo-one-regular">Yellow Airline</h3>
+                            <div class="d-flex gap-2 ms-3 flex-wrap">
+                                <img src="{% static 'images/tecnologias/react.svg' %}" alt="React" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/tailwindcss.svg' %}" alt="Tailwind CSS" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/typescript.svg' %}" alt="TypeScript" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/postgresql.svg' %}" alt="PostgreSQL" class="tech-icon">
+                                <img src="{% static 'images/tecnologias/docker.svg' %}" alt="Docker" class="tech-icon">
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Aplicación full stack de reservas de vuelos desarrollada como uno de mis proyectos más
+                            completos hasta la fecha. Incluye búsqueda interactiva de vuelos, autenticación,
+                            selección de asientos, pagos con <strong>Stripe</strong>, panel de reservas y generación de
+                            boarding pass en <strong>PDF con QR</strong>. Además, está desplegada en producción con el
+                            frontend en <strong>Vercel</strong> y el backend en <strong>Railway</strong>.
+                        </p>
+                        <div class="d-flex align-items-center gap-3 mt-5 flex-wrap">
+                            <a href="https://yellow-airline.vercel.app/"
+                               class="btn project-btn russo-one-regular"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt me-2"></i> Ver demo
+                            </a>
+                            <a href="https://github.com/KikolasDEV/yellow-airline"
+                               class="btn project-btn russo-one-regular"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                <i class="fab fa-github me-2"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Contenedor proyectos Java -->

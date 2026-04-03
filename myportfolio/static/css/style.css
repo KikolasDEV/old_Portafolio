@@ -930,6 +930,20 @@ footer .nav-link:hover {
     padding-left: 0;
 }
 
+.project-kicker {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--accent-soft);
+    font-size: 0.76rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
 /* --- Tarjetas generadas desde GitHub (Java) --- */
 .dynamic-project-card {
     position: relative;
